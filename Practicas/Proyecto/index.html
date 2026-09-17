@@ -4,7 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
+<style>
+    .match-card{
+        width: 235px;
+        flex-shrink: 0;
+        background-color: #fff;
+        font-size: 0.85rem;
+    }
+    .team-logo {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+    .score-box {
+      width: 32px;
+      height: 52px;
+      border: 1px solid #dee2e6;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #fff;
+      font-weight: bold;
+      color: #333;
+    }
+    .odds-text {
+      font-size: 0.7rem;
+      color: #6c757d;
+    }
+
+    .carousel-control-next-custom {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 32px;
+      background-color: rgba(0, 0, 0, 0.25);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-decoration: none;
+      z-index: 5;
+    }
+
+    .carousel-control-next-custom:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+</style>
 <body>
     <section>
         <div>
@@ -31,6 +84,82 @@
                 <li><a href="#">Precio luz hoy</a></li>
             </ul>
         </div>
+
+        <div class="container-fluid bg-white border rounded shadow-sm p-0 overflow-hidden">
+            <div class="row g-0 align-items-stretch">
+                <div class="col-auto bg-light border-end p-3 d-flex flex-column justify-content-center align-items-start" style="min-width: 130px;">
+                    <label class="fw-bold mb-1 text-dark" style="font-size: 0.9rem;">Resultados:</label>
+                    <select class="form-select form-select-sm border-secondary-subtle">
+                        <option selected>Todos</option>
+                    </select>
+                </div>
+                <div class="col position-relative overflow-hidden p-2">
+        
+        <div id="carouselPartidos" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="d-flex flex-column border-end pe-3">
+                  <div class="d-flex align-items-center mb-2 fw-bold text-dark small">
+                    <i class="bi bi-dribbble me-1"></i> LALIGA EA SPORTS
+                  </div>
+
+                  
+                  <div class="d-flex gap-2">
+                    
+                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                      <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                        11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center my-1">
+                        <div class="d-flex flex-column gap-1">
+                         
+                          <div class="d-flex align-items-center gap-2">
+                            <img src="1297.png" alt="Pumas" class="team-logo">
+                            <span class="text-primary fw-medium">Pumas</span>
+                          </div>
+
+                          <div class="d-flex align-items-center gap-2">
+                            <img src="1292.png" alt="América" class="team-logo">
+                            <span class="text-primary fw-medium">América</span>
+                          </div>
+                        </div>
+
+                        <div class="score-box">
+                          <span>-</span>
+                          <span>-</span>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center pt-1 border-top mt-1">
+                        <span class="odds-text">1: -176 - X: +285 - 2: +500</span>
+                        <a href="#" class="text-danger fw-bold text-decoration-none" style="font-size: 0.75rem;">JUGAR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex gap-2 align-items-center p-3">
+                <p class="text-muted mb-0"></p>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-custom carousel-control-next-custom" type="button" data-bs-target="#carouselPartidos" data-bs-slide="next">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
     </section>
     <header>
         <div class="nav">
@@ -73,5 +202,83 @@
     <main>
 
     </main>
+    <footer>
+        <div class="footer bg-dark text-white py-3">
+            <div class="container text-center">
+                <strong class="text-center">Otras webs de Unidad Editorial</strong>
+                <hr>
+            </div>
+            <div class="container">
+                    <div class="row">
+                    <div class="col-3">
+                        <strong class="my-4">Marca</strong>
+                        <p class="mb-0">App Marca</p>
+                        <p class="mb-0">Apuestas Deportivas</p>
+                        <p class="mb-0">Clasificación LaLiga</p>
+                        <p class="mb-0">Calendario LaLiga</p>
+                        <p class="mb-0">Hemeroteca Marca</p>
+                        <p class="mb-0">Marca eSports</p>
+                        <p class="mb-0">Marca Madrid</p>
+                        <p class="mb-0">Marca en Orbyt</p>
+                        <p class="mb-0">Zona Marca</p>
+                    </div>
+                    <div class="col-3">
+                        <strong>Ocio y Moda</strong>
+                        <p class="mb-0">Tiramillas</p>
+                        <p class="mb-0">Moda-Telva</p>
+                        <p class="mb-0">BUHO Magazine</p>
+                        <p class="mb-0">Traductor</p>
+                        <p class="mb-0">Programación TV</p>
+                        <p class="mb-0">Marca Entradas</p>
+                        <p class="mb-0">Mi bebé y yo</p>
+                    </div>
+                    <div class="col-3">
+                        <strong>Unidad Editorial</strong>
+                        <p class="mb-0">El mundo</p>
+                        <p class="mb-0">Expansión</p>
+                        <p class="mb-0">CuídatePlus</p>
+                        <p class="mb-0">Diario Médico</p>
+                        <p class="mb-0">Correo Farmacéutico</p>
+                        <p class="mb-0">Suscripción Marca</p>
+                        <p class="mb-0">Suscripción El Mundo</p>
+                    </div>
+                    <div class="col-3">
+                        <strong>Formación y Empleo</strong>
+                        <p class="mb-0">Escuela Unidad Editorial</p>
+                        <p class="mb-0">Unidad Editorial</p>
+                        <p class="mb-0">Expansión y Empleo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light">
+            <p> </p>
+            <div class="text-center col-12">
+                <strong>Agosto 2018 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.</strong>
+            </div>
+            <div class="col-12 text-center text-black py-1">
+                <small>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Términos y condiciones</a>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Política de privacidad</a>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Política de cookies</a>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Certificado OJD</a>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Contacto</a>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Publicidad</a>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Ayuda</a>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Nuestro equipo</a>
+                    <a href="#" class="px-1 text-muted text-decoration-none">Venta de contenidos</a>
+                </small>
+            </div>
+            <div class="text-center col-12">
+                <strong>Siguenos en</strong>
+            </div>
+            <di class="text-center col-12 py-2">
+                <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark me-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark me-2"><i class="bi bi-google"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-rss"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
