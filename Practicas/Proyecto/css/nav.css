@@ -20,6 +20,10 @@
 }
 
 /* ── Base ───────────────────────────────────────────────────── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 body {
   font-family: 'Inter', Arial, sans-serif;
   background: #fff;
@@ -34,6 +38,8 @@ body.scrolled {
 #site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
+  width: 100%;
+  max-width: 100vw;
   z-index: 1050;
   background: #fff;
 }
@@ -279,6 +285,34 @@ body.scrolled {
   background: var(--marca-red);
   position: relative;
   z-index: 200;
+  width: 100%;
+  max-width: 100vw;
+}
+
+@media (max-width: 1200px) {
+  .nl {
+    padding: 10px 8px;
+    font-size: .76rem;
+    letter-spacing: .1px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .main-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .nl {
+    padding: 8px 10px;
+    font-size: .75rem;
+  }
+  .main-site-highlights {
+    display: none !important;
+  }
 }
 
 /* Nav list */
