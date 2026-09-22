@@ -116,6 +116,119 @@
       color: #fff;
     }
 
+        .marca-topbar {
+      font-family: Roboto, Arial, sans-serif;
+      border-bottom: 1px solid #e5e5e5;
+    }
+ 
+    .marca-logo {
+      font-weight: 800;
+      font-style: italic;
+      font-size: 1.9rem;
+      color: #E30613;
+      letter-spacing: -1px;
+      text-decoration: none;
+    }
+ 
+    .marca-logo .logo-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background-color: #E30613;
+      border-radius: 50%;
+      margin-left: 3px;
+      vertical-align: middle;
+    }
+ 
+    .country-select {
+      font-size: 0.85rem;
+      color: #333;
+      border-radius: 30px;
+      padding: 4px 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+ 
+    .marca-mainnav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    .marca-mainnav a {
+      color: #1a1a1a;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+ 
+    .marca-mainnav a:hover {
+      color: #E30613;
+    }
+ 
+    .marca-login-btn {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      border: 1px solid #1a1a1a;
+      border-radius: 30px;
+      padding: 6px 16px;
+      white-space: nowrap;
+    }
+ 
+    .marca-login-btn:hover {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+ 
+    /* ===== Franja roja de secciones ===== */
+    .marca-redbar {
+      background-color: #cf0018;
+    }
+ 
+    .redbar-title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      white-space: nowrap;
+    }
+ 
+    .redbar-sep {
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 300;
+      font-size: 1.15rem;
+    }
+ 
+    .redbar-tabs {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    .redbar-tabs li a {
+      display: inline-block;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+ 
+    .redbar-tabs li a:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+ 
+    .redbar-tabs li.active a {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
     .no-scrollbar::-webkit-scrollbar {
         display: none;               
     }
@@ -145,6 +258,52 @@
                 <li><a href="#" style="font-size: 10px;">Fútbol hoy</a></li>
                 <li><a href="#" style="font-size: 10px;">Precio luz hoy</a></li>
             </ul>
+        </div>
+
+        <div class="marca-topbar bg-white">
+            <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap gap-2 py-2 px-3">
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="#" class="marca-logo">MARCA<span class="logo-dot"></span></a>
+                    <div class="country-select border d-flex align-items-center gap-1">
+                        <span>🇲🇽</span>
+                        <span class="fw-medium">México</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </div>
+                </div>
+ 
+                <ul class="marca-mainnav d-none d-lg-flex align-items-center gap-4">
+                    <li><a href="#">Fútbol <i class="bi bi-chevron-down small"></i></a></li>
+                    <li><a href="#">Motor <i class="bi bi-chevron-down small"></i></a></li>
+                    <li><a href="#">Boxeo</a></li>
+                    <li><a href="#">NFL <i class="bi bi-chevron-down small"></i></a></li>
+                    <li><a href="#">Otros deportes <i class="bi bi-chevron-down small"></i></a></li>
+                    <li><a href="#">Más +</a></li>
+                </ul>
+ 
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-search fs-5"></i>
+                    <a href="#" class="marca-login-btn d-flex align-items-center gap-1">
+                        <i class="bi bi-person"></i> Iniciar sesión
+                    </a>
+                </div>
+ 
+            </div>
+        </div>
+
+        <div class="marca-redbar">
+            <div class="container-fluid d-flex align-items-center gap-3 px-3 py-2">
+                <span class="redbar-title">Actualidad</span>
+                <span class="redbar-sep">/</span>
+                <ul class="redbar-tabs d-flex flex-wrap">
+                    <li class="active"><a href="#">Noticias</a></li>
+                    <li><a href="#">Dinero</a></li>
+                    <li><a href="#">Loterías</a></li>
+                    <li><a href="#">Sociedad</a></li>
+                    <li><a href="#">Sucesos</a></li>
+                    <li><a href="#">Salud</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="container my-3">
