@@ -115,10 +115,6 @@
       background-color: rgba(0, 0, 0, 0.4);
       color: #fff;
     }
-
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;               
-    }
 </style>
 <body>
     <section>
@@ -153,243 +149,256 @@
             <div class="col-12 col-md-auto bg-light border-end border-bottom border-md-bottom-0 p-2 p-md-3 d-flex flex-row flex-md-column justify-content-between justify-content-md-center align-items-center align-items-md-start" style="min-width: 130px;">
                 <label class="fw-bold mb-0 mb-md-1 text-dark" style="font-size: 0.85rem;">Resultados:</label>
                 <select class="form-select form-select-sm border-secondary-subtle" style="width: auto;">
-                    <option value="todos" selected>Todos</option>
-                    <option value="laliga">LALIGA EA SPORTS</option>
-                    <option value="MX">La Liga MX</option>
+                    <option selected>Todos</option>
+                    <option>LALIGA EA SPORTS</option>
+                    <option>La Liga MX</option>
                 </select>
             </div>
-            <div class="col position-relative overflow-hidden p-2 pe-4">    
-    <div id="carouselPartidos" class="carousel slide" data-bs-interval="false">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="d-flex flex-column">
-                    <div class="d-flex justify-content-between align-items-center mb-2 px-1">
-                        <div class="fw-bold text-dark small d-flex align-items-center" style="font-size: 0.8rem;">
-                            <i class="bi bi-dribbble me-1"></i> LALIGA EA SPORTS
+            <div class="col position-relative overflow-hidden p-2 pe-4">
+                <div id="carouselPartidos" class="carousel slide" data-bs-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                    <div class="fw-bold text-dark small d-flex align-items-center" style="font-size: 0.8rem;">
+                                        <i class="bi bi-dribbble me-1"></i> LALIGA EA SPORTS
+                                    </div>
+                                    <a href="#" class="text-primary text-decoration-none small fw-semibold" style="font-size: 0.8rem;">Ver todo &gt;</a>
+                                </div>
+                                <div class="d-flex gap-2 overflow-x-auto pb-1">
+                                    
+                                    <!--Division-->
+                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center my-1">
+                                            <div class="d-flex flex-column gap-1">
+                         
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="1297.png" alt="Pumas" class="team-logo">
+                                                    <span class="text-primary fw-medium">Pumas</span>
+                                                </div>
+
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="1292.png" alt="América" class="team-logo">
+                                                        <span class="text-primary fw-medium">América</span>
+                                                    </div>
+                                            </div>
+                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
+                                                <span>-</span>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Division-->
+                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center my-1">
+                                            <div class="d-flex flex-column gap-1">
+                         
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="1297.png" alt="Pumas" class="team-logo">
+                                                    <span class="text-primary fw-medium">Pumas</span>
+                                                </div>
+
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="1292.png" alt="América" class="team-logo">
+                                                        <span class="text-primary fw-medium">América</span>
+                                                    </div>
+                                            </div>
+                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
+                                                <span>-</span>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Division-->
+                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center my-1">
+                                            <div class="d-flex flex-column gap-1">
+                         
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="1297.png" alt="Pumas" class="team-logo">
+                                                    <span class="text-primary fw-medium">Pumas</span>
+                                                </div>
+
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="1292.png" alt="América" class="team-logo">
+                                                        <span class="text-primary fw-medium">América</span>
+                                                    </div>
+                                            </div>
+                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
+                                                <span>-</span>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Division-->
+                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center my-1">
+                                            <div class="d-flex flex-column gap-1">
+                         
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="1297.png" alt="Pumas" class="team-logo">
+                                                    <span class="text-primary fw-medium">Pumas</span>
+                                                </div>
+
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="1292.png" alt="América" class="team-logo">
+                                                        <span class="text-primary fw-medium">América</span>
+                                                    </div>
+                                            </div>
+                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
+                                                <span>-</span>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Division-->
+                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center my-1">
+                                            <div class="d-flex flex-column gap-1">
+                         
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="1297.png" alt="Pumas" class="team-logo">
+                                                    <span class="text-primary fw-medium">Pumas</span>
+                                                </div>
+
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="1292.png" alt="América" class="team-logo">
+                                                        <span class="text-primary fw-medium">América</span>
+                                                    </div>
+                                            </div>
+                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
+                                                <span>-</span>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Division-->
+                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center my-1">
+                                            <div class="d-flex flex-column gap-1">
+                         
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="1297.png" alt="Pumas" class="team-logo">
+                                                    <span class="text-primary fw-medium">Pumas</span>
+                                                </div>
+
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="1292.png" alt="América" class="team-logo">
+                                                        <span class="text-primary fw-medium">América</span>
+                                                    </div>
+                                            </div>
+                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
+                                                <span>-</span>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Division-->
+                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center my-1">
+                                            <div class="d-flex flex-column gap-1">
+                         
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="1297.png" alt="Pumas" class="team-logo">
+                                                    <span class="text-primary fw-medium">Pumas</span>
+                                                </div>
+
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="1292.png" alt="América" class="team-logo">
+                                                        <span class="text-primary fw-medium">América</span>
+                                                    </div>
+                                            </div>
+                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
+                                                <span>-</span>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Division-->
+                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
+                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center my-1">
+                                            <div class="d-flex flex-column gap-1">
+                         
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="1297.png" alt="Pumas" class="team-logo">
+                                                    <span class="text-primary fw-medium">Pumas</span>
+                                                </div>
+
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="1292.png" alt="América" class="team-logo">
+                                                        <span class="text-primary fw-medium">América</span>
+                                                    </div>
+                                            </div>
+                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
+                                                <span>-</span>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="text-primary text-decoration-none small fw-semibold" style="font-size: 0.8rem;">Ver todo &gt;</a>
+                        <div class="carousel-item">
+                            <div class="d-flex gap-2 align-items-center p-3">
+                                <p class="text-muted mb-0 small">Cargando más partidos...</p>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="partidos-scroll d-flex gap-2 overflow-x-auto pb-1 no-scrollbar">
-                                    <!--Division-->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
 
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <img src="1292.png" alt="América" class="team-logo">
-                                                        <span class="text-primary fw-medium">América</span>
-                                                    </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                    
 
-                                    <!--Division-->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                         
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <img src="1292.png" alt="América" class="team-logo">
-                                                        <span class="text-primary fw-medium">América</span>
-                                                    </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Division-->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                         
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <img src="1292.png" alt="América" class="team-logo">
-                                                        <span class="text-primary fw-medium">América</span>
-                                                    </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Division-->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                         
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <img src="1292.png" alt="América" class="team-logo">
-                                                        <span class="text-primary fw-medium">América</span>
-                                                    </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Division-->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                         
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <img src="1292.png" alt="América" class="team-logo">
-                                                        <span class="text-primary fw-medium">América</span>
-                                                    </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Division-->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                         
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <img src="1292.png" alt="América" class="team-logo">
-                                                        <span class="text-primary fw-medium">América</span>
-                                                    </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Division-->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                         
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <img src="1292.png" alt="América" class="team-logo">
-                                                        <span class="text-primary fw-medium">América</span>
-                                                    </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Division-->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                         
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-
-                                                    <div class="d-flex align-items-center gap-2">
-                                                        <img src="1292.png" alt="América" class="team-logo">
-                                                        <span class="text-primary fw-medium">América</span>
-                                                    </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>     
-                    </div>
                 </div>
+                <button class="carousel-control-custom carousel-control-next-custom position-absolute end-0 border-0 text-white d-flex align-items-center justify-content-center p-0" 
+                            type="button" 
+                            data-bs-target="#carouselPartidos" 
+                            data-bs-slide="next"
+                            style="top: 50%; transform: translateY(-50%); height: 35%; width: 26px; background-color: rgba(180, 180, 180, 0.85); border-radius: 3px 0 0 3px; z-index: 5;">
+                        <i class="bi bi-chevron-right fs-6"></i>
+                </button>
             </div>
-            <div class="carousel-item">
-                <div class="d-flex gap-2 align-items-center p-3">
-                    <p class="text-muted mb-0 small">Cargando más partidos...</p>
-                </div>
-            </div>
+
         </div>
     </div>
-    <button class="btn-scroll-prev carousel-control-custom carousel-control-prev-custom position-absolute start-0 border-0 text-white d-flex align-items-center justify-content-center p-0 d-none" 
-            type="button" data-dir="-1"
-            style="top: 50%; transform: translateY(-50%); height: 35%; width: 26px; background-color: rgba(180, 180, 180, 0.85); border-radius: 0 3px 3px 0; z-index: 5;">
-        <i class="bi bi-chevron-left fs-6"></i>
-    </button>
-
-    <button class="btn-scroll-next carousel-control-custom carousel-control-next-custom position-absolute end-0 border-0 text-white d-flex align-items-center justify-content-center p-0" 
-            type="button" data-dir="1"
-            style="top: 50%; transform: translateY(-50%); height: 35%; width: 26px; background-color: rgba(180, 180, 180, 0.85); border-radius: 3px 0 0 3px; z-index: 5;">
-        <i class="bi bi-chevron-right fs-6"></i>
-    </button>
 </div>
+
+      </div>
+    </div>
+  </div>
     </section>
     <header>
         <div class="nav">
