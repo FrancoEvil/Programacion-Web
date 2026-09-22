@@ -1,64 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marca</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>MARCA</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <style>
-      .es-noticia {
-          background-color: #fff;
-          padding: 0 10px;
-        /*  height: 34px;*/
-          font-family: Roboto, Arial, sans-serif;
-          font-size: 16px;
-          white-space: nowrap; 
-          overflow: hidden;    
-      }
-
-      .list-seo-links {
-        display: flex;
-        align-items: center;
-        
-          margin: 0;
-          padding: 0;
-          list-style: none;
-      }
-
-
-      .es-noticia-label {
-          font-weight: bold;
-          color: #222;
-          margin-right: 5px;
-      }
-
-      .list-seo-links a {
-          display: block;
-          padding: 0 8px;
-          line-height: 1;
-          color: #777;
-          text-decoration: none;
-      }
-
-      .list-seo-links a:hover {
-          color: #000;
-      }
-
-      .list-seo-links li:nth-child(n+3) a {
-          border-left: 1px solid #ccc;
-      }
-
     .footer .col-3 strong.d-block {
-        margin: 0 0 1rem 0 !important; 
+        margin: 0 0 1rem 0 !important;
         font-size: 0.95rem;
     }
 
     .footer .col-3 p {
-        margin-bottom: 0.35rem;  
+        margin-bottom: 0.35rem;
         line-height: 1.3;
     }
 
@@ -67,719 +36,1346 @@
         font-size: 0.9rem;
         font-weight: 500;
     }
-    .match-card{
+
+    .match-card {
         width: 235px;
         flex-shrink: 0;
         background-color: #fff;
         font-size: 0.85rem;
     }
+
     .team-logo {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
     }
+
     .score-box {
-      width: 32px;
-      height: 52px;
-      border: 1px solid #dee2e6;
-      border-radius: 6px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      background-color: #fff;
-      font-weight: bold;
-      color: #333;
+        width: 32px;
+        height: 52px;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #fff;
+        font-weight: bold;
+        color: #333;
     }
+
     .odds-text {
-      font-size: 0.7rem;
-      color: #6c757d;
+        font-size: 0.7rem;
+        color: #6c757d;
     }
 
     .carousel-control-next-custom {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      width: 32px;
-      background-color: rgba(0, 0, 0, 0.25);
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-decoration: none;
-      z-index: 5;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 32px;
+        background-color: rgba(0, 0, 0, 0.25);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        z-index: 5;
     }
 
     .carousel-control-next-custom:hover {
-      background-color: rgba(0, 0, 0, 0.4);
-      color: #fff;
-    }
-
-        .marca-topbar {
-      font-family: Roboto, Arial, sans-serif;
-      border-bottom: 1px solid #e5e5e5;
-    }
- 
-    .marca-logo {
-      font-weight: 800;
-      font-style: italic;
-      font-size: 1.9rem;
-      color: #E30613;
-      letter-spacing: -1px;
-      text-decoration: none;
-    }
- 
-    .marca-logo .logo-dot {
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      background-color: #E30613;
-      border-radius: 50%;
-      margin-left: 3px;
-      vertical-align: middle;
-    }
- 
-    .country-select {
-      font-size: 0.85rem;
-      color: #333;
-      border-radius: 30px;
-      padding: 4px 12px;
-      cursor: pointer;
-      white-space: nowrap;
-    }
- 
-    .marca-mainnav {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
- 
-    .marca-mainnav a {
-      color: #1a1a1a;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      white-space: nowrap;
-    }
- 
-    .marca-mainnav a:hover {
-      color: #E30613;
-    }
- 
-    .marca-login-btn {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #1a1a1a;
-      border: 1px solid #1a1a1a;
-      border-radius: 30px;
-      padding: 6px 16px;
-      white-space: nowrap;
-    }
- 
-    .marca-login-btn:hover {
-      background-color: #1a1a1a;
-      color: #fff;
-    }
- 
-    .marca-redbar {
-      background-color: #cf0018;
-    }
- 
-    .redbar-title {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.15rem;
-      white-space: nowrap;
-    }
- 
-    .redbar-sep {
-      color: rgba(255, 255, 255, 0.55);
-      font-weight: 300;
-      font-size: 1.15rem;
-    }
- 
-    .redbar-tabs {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
- 
-    .redbar-tabs li a {
-      display: inline-block;
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      padding: 6px 14px;
-      border-radius: 4px;
-      white-space: nowrap;
-    }
- 
-    .redbar-tabs li a:hover {
-      background-color: rgba(0, 0, 0, 0.15);
-    }
- 
-    .redbar-tabs li.active a {
-      background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
     }
 
     .no-scrollbar::-webkit-scrollbar {
-        display: none;               
+        display: none;
     }
 </style>
+
 <body>
-    <section>
-        <div class="es-noticia">
-            <ul class="list-seo-links">
-                <li style="font-size: 10px;" class="es-noticia-label">Es noticia:</li>
-                <li><a href="#" style="font-size: 10px;">Marc Márquez</a></li>
-                <li><a href="#" style="font-size: 10px;">Abde</a></li>
-                <li><a href="#" style="font-size: 10px;">LaLiga</a></li>
-                <li><a href="#" style="font-size: 10px;">Alquiler</a></li>
-                <li><a href="#" style="font-size: 10px;">Rayo - Espanyol dónde ver</a></li>
-                <li><a href="#" style="font-size: 10px;">Alavés - Valencia dónde ver</a></li>
-                <li><a href="#" style="font-size: 10px;">Elche - Real Madrid dónde ver</a></li>
-                <li><a href="#" style="font-size: 10px;">Videojuegos</a></li>
-                <li><a href="#" style="font-size: 10px;">Patatas bravas</a></li>
-                <li><a href="#" style="font-size: 10px;">Turbinas eólicas</a></li>
-                <li><a href="#" style="font-size: 10px;">Almudena Grandes</a></li>
-                <li><a href="#" style="font-size: 10px;">Toros hoy</a></li>
-                <li><a href="#" style="font-size: 10px;">Sartre</a></li>
-                <li><a href="#" style="font-size: 10px;">Horóscopo</a></li>
-                <li><a href="#" style="font-size: 10px;">Abogado</a></li>
-                <li><a href="#" style="font-size: 10px;">Han Kang</a></li>
-                <li><a href="#" style="font-size: 10px;">Agua</a></li>
-                <li><a href="#" style="font-size: 10px;">Fútbol hoy</a></li>
-                <li><a href="#" style="font-size: 10px;">Precio luz hoy</a></li>
-            </ul>
-        </div>
-        
-<div class="bg-white py-2 px-3 border-bottom">
-    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
-        <div class="d-none d-lg-flex align-items-center gap-3">
-            <a href="#" class="text-dark text-decoration-none fw-bold small d-flex align-items-center gap-1">
-                <i class="bi bi-vinyl-fill text-primary fs-5"></i> Radio MARCA
-            </a>
-            <a href="#" class="text-dark text-decoration-none fw-bold small d-flex align-items-center gap-1">
-                <i class="bi bi-heart-pulse-fill text-info fs-5"></i> CuídatePlus
-            </a>
-            <a href="#" class="text-dark text-decoration-none fw-bold small d-flex align-items-center gap-1">
-                <i class="bi bi-hash text-danger fs-4"></i> Lo + trending
-            </a>
-        </div>
-        <div class="mx-lg-auto text-center">
-            <a href="#" class="marca-logo text-decoration-none" style="font-size: 2.2rem;">MARCA<span class="logo-dot"></span></a>
-        </div>
-        <div class="d-flex align-items-center gap-3">
-            <div class="country-select border d-flex align-items-center gap-1 rounded-pill px-2 py-1">
-                <span>🇲🇽</span>
-                <span class="fw-medium text-dark" style="font-size: 0.85rem;">México</span>
-                <i class="bi bi-chevron-down small text-dark"></i>
-            </div>
-            <a href="#" class="marca-login-btn text-decoration-none d-flex align-items-center gap-1 rounded-pill border px-3 py-1 text-dark fw-medium" style="font-size: 0.85rem;">
-                <i class="bi bi-person"></i> Iniciar sesión
-            </a>
-        </div>
-    </div>
-</div>
-<nav class="marca-redbar position-relative py-1" style="z-index: 1050;">
-    <div class="container-fluid">
-        <ul class="nav justify-content-center align-items-center mb-0 gap-1 gap-md-3 flex-wrap">
-            <li class="nav-item dropdown position-static">
-                <a class="nav-link text-white fw-bold px-2 d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Fútbol <i class="bi bi-chevron-down" style="font-size: 0.6rem;"></i>
-                </a>
-                <div class="dropdown-menu w-100 bg-dark rounded-0 border-0 mt-0 p-4 shadow-lg">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h6 class="text-secondary fw-bold mb-3">México</h6>
-                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Liga MX</a></li>
-                                    <li><a href="#" class="text-muted text-decoration-none" style="font-size: 0.8rem;">Calendario Apertura / Posiciones</a></li>
-                                    <li class="mt-2"><a href="#" class="text-white text-decoration-none fw-bold small">Liga MX Femenil</a></li>
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Liga de Expansión MX</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3">
-                                <h6 class="text-secondary fw-bold mb-3">América</h6>
-                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Copa América</a></li>
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">MLS</a></li>
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Concachampions</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3">
-                                <h6 class="text-secondary fw-bold mb-3">Europa</h6>
-                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">LaLiga EA Sports</a></li>
-                                    <li><a href="#" class="text-muted text-decoration-none" style="font-size: 0.8rem;">Barcelona / Real Madrid</a></li>
-                                    <li class="mt-2"><a href="#" class="text-white text-decoration-none fw-bold small">Premier League</a></li>
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Champions League</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item dropdown position-static">
-                <a class="nav-link text-white fw-bold px-2 d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Motor <i class="bi bi-chevron-down" style="font-size: 0.6rem;"></i>
-                </a>
-                <div class="dropdown-menu w-100 bg-dark rounded-0 border-0 mt-0 p-4 shadow-lg">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h6 class="text-secondary fw-bold mb-3">F1</h6>
-                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Calendario / Clasificación</a></li>
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Clasificación constructores</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3">
-                                <h6 class="text-secondary fw-bold mb-3">Motociclismo</h6>
-                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">MotoGP</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item"><a class="nav-link text-white fw-bold px-2" href="#">Boxeo</a></li>
-            <li class="nav-item dropdown position-static">
-                <a class="nav-link text-white fw-bold px-2 d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    NFL <i class="bi bi-chevron-down" style="font-size: 0.6rem;"></i>
-                </a>
-                <div class="dropdown-menu w-100 bg-dark rounded-0 border-0 mt-0 p-4 shadow-lg">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h6 class="text-secondary fw-bold mb-3">NFL</h6>
-                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Calendario</a></li>
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Posiciones</a></li>
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Resultados</a></li>
-                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Superbowl</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item dropdown position-static">
-                <a class="nav-link text-white fw-bold px-2 d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Otros deportes <i class="bi bi-chevron-down" style="font-size: 0.6rem;"></i>
-                </a>
-                <div class="dropdown-menu w-100 bg-dark rounded-0 border-0 mt-0 p-4 shadow-lg">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h6 class="text-white fw-bold mb-3">Básquetbol</h6>
-                                <ul class="list-unstyled mb-4 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-secondary text-decoration-none small">NBA</a></li>
-                                </ul>
-                                <h6 class="text-white fw-bold mb-0">UFC</h6>
-                            </div>
-                            <div class="col-md-3">
-                                <h6 class="text-white fw-bold mb-3">Béisbol</h6>
-                                <ul class="list-unstyled mb-4 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-secondary text-decoration-none small">Calendario / Posiciones</a></li>
-                                </ul>
-                                <h6 class="text-white fw-bold mb-0">Juegos Olímpicos</h6>
-                            </div>
-                            <div class="col-md-3">
-                                <h6 class="text-white fw-bold mb-3">Tenis</h6>
-                                <ul class="list-unstyled mb-4 d-flex flex-column gap-2">
-                                    <li><a href="#" class="text-secondary text-decoration-none small">Abierto Mexicano</a></li>
-                                </ul>
-                                <h6 class="text-white fw-bold mb-0">Juegos Centroamericanos</h6>
-                            </div>
-                            <div class="col-md-3">
-                                <h6 class="text-white fw-bold mb-3">Lucha Libre</h6>
-                                <ul class="list-unstyled mb-4 d-flex flex-column gap-2">
-                                    <li><span class="small d-inline-block" style="height: 20px;"></span></li>
-                                </ul>
-                                <h6 class="text-white fw-bold mb-0">Juegos Panamericanos</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item border-start border-light d-none d-md-block" style="height: 20px; opacity: 0.5;"></li>
-            <li class="nav-item d-flex align-items-center px-2">
-                <a href="#" class="text-white fw-bold text-decoration-none">Actualidad</a>
-                <span class="text-white-50 mx-2">/</span>
-                <a href="#" class="text-white text-decoration-none" style="font-size: 0.95rem;">Últimas noticias</a>
-            </li>
-            <li class="nav-item"><a class="nav-link text-white fw-bold px-2" href="#">Más +</a></li>
-        </ul>
-    </div>
-</nav>
-<div class="bg-light border-bottom py-2">
-    <div class="container-fluid d-flex justify-content-center align-items-center gap-3 overflow-x-auto no-scrollbar">
-        <a href="#"><img src="1292.png" alt="América" width="22" height="22" class="rounded-circle"></a>
-        <a href="#"><img src="1284.png" alt="Atlas" width="22" height="22"></a>
-        <a href="#"><img src="1283.png" alt="Chivas" width="22" height="22"></a>
-        <a href="#"><img src="853.png" alt="Cruz Azul" width="22" height="22"></a>
-        <a href="#"><img src="1294.png" alt="Tigres" width="22" height="22"></a>
-        <a href="#"><img src="1297.png" alt="Pumas" width="22" height="22"></a>
-        <a href="#"><img src="1291.png" alt="Toluca" width="22" height="22"></a>
-    </div>
-</div>
-
-<div class="container mt-3 mb-4" style="max-width: 980px;">
-
-    <div class="text-center text-secondary mb-1" style="font-size: 0.65rem; letter-spacing: 0.5px;">
-        PUBLICIDAD
-    </div>
-
-    <div class="rounded-4 p-3 shadow-sm" style="background-color: #0b1a2a;">
-        <div class="row align-items-center">
-            
-
-            <div class="col-12 col-md-3 mb-3 mb-md-0 d-flex flex-column gap-3">
-
-                <div class="d-flex align-items-center gap-2">
-
-                    <i class="bi bi-person-fill text-white-50 fs-2"></i>
-                    <div>
-                        <div class="fw-bold text-white small">Atlante</div>
-
-                        <div class="d-flex gap-1 mt-1">
-                            <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
-                            <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
-                            <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
-                            <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
-                            <span class="bg-secondary rounded-circle" style="width: 7px; height: 7px;"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-center gap-2">
-
-                    <i class="bi bi-person-fill text-white fs-2"></i>
-                    <div>
-                        <div class="fw-bold text-white small">Monterrey</div>
-
-                        <div class="d-flex gap-1 mt-1">
-                            <span class="bg-success rounded-circle" style="width: 7px; height: 7px;"></span>
-                            <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
-                            <span class="bg-success rounded-circle" style="width: 7px; height: 7px;"></span>
-                            <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
-                            <span class="bg-secondary rounded-circle" style="width: 7px; height: 7px;"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 mb-3 mb-md-0">
-                <div class="text-center text-white mb-2">
-                    <h6 class="fw-bold mb-0">Liga MX, Apertura</h6>
-                    <small class="text-white-50" style="font-size: 0.75rem;">19:00 25-09-2026</small>
-                </div>
-
-                <div class="d-flex gap-2 mb-2">
-                    <div class="bg-white text-dark rounded-2 py-2 px-3 flex-fill d-flex justify-content-between align-items-center cursor-pointer">
-                        <span class="text-muted fw-medium small">1</span> 
-                        <span class="fw-bold">3.60</span>
-                    </div>
-                    <div class="bg-white text-dark rounded-2 py-2 px-3 flex-fill d-flex justify-content-between align-items-center cursor-pointer">
-                        <span class="text-muted fw-medium small">X</span> 
-                        <span class="fw-bold">3.60</span>
-                    </div>
-                    <div class="bg-white text-dark rounded-2 py-2 px-3 flex-fill d-flex justify-content-between align-items-center cursor-pointer">
-                        <span class="text-muted fw-medium small">2</span> 
-                        <span class="fw-bold">1.91</span>
-                    </div>
-                </div>
-
-                <div class="d-flex gap-2">
-                    <div class="bg-white text-dark rounded-2 py-1 px-2 flex-fill text-center">
-                        <div class="text-muted" style="font-size: 0.65rem;">Stake</div>
-                        <div class="fw-bold" style="font-size: 0.95rem;">$100.00 MXN</div>
-                    </div>
-                    <div class="text-dark rounded-2 py-1 px-2 flex-fill text-center" style="background-color: #ffb700;">
-                        <div style="font-size: 0.65rem;">Possible Payout</div>
-                        <div class="fw-bold" style="font-size: 0.95rem;">$360.00</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-3 text-center">
-                <div class="text-white mb-2">
-
-                    <span class="fst-italic fw-bolder fs-2">Stake<span class="fs-6">.mx</span></span>
-                </div>
-                <button class="btn w-100 fw-bold rounded-2 py-2 mb-2" style="background-color: #00e701; color: #000; font-size: 0.9rem;">
-                    REGÍSTRATE
-                </button>
-                <p class="text-white-50 mx-auto" style="font-size: 0.35rem; line-height: 1.2; text-align: justify;">
-                    WWW.STAKE.MX ES OPERADA EN MÉXICO POR PRODUCCIONES MÓVILES S.A. DE C.V., TITULAR DEL PERMISO SEGOB DGAJS/SCEVF/P-06/2005-TER, EN UNIÓN DE UNOCAPITAL LA PAZ OPERADORA, S.A. DE C.V., DE CONFORMIDAD CON LOS OFICIOS DGJS/3983/2021, DGJS/DRCA/2772/2021 Y DGJS/DRCA/2852/2021. JUEGUE RESPONSABLEMENTE. EL PRINCIPAL PROPÓSITO ES LA RECREACIÓN, DIVERSIÓN Y ESPARCIMIENTO. 18+
-                </p>
-            </div>
-
-        </div>
-    </div>
-</div>
-        <div class="container my-3">
-    <div class="bg-white border rounded shadow-sm overflow-hidden mx-auto" style="max-width: 980px;">
-        <div class="row g-0 align-items-stretch flex-column flex-md-row">
-            <div class="col-12 col-md-auto bg-light border-end border-bottom border-md-bottom-0 p-2 p-md-3 d-flex flex-row flex-md-column justify-content-between justify-content-md-center align-items-center align-items-md-start" style="min-width: 130px;">
-                <label class="fw-bold mb-0 mb-md-1 text-dark" style="font-size: 0.85rem;">Resultados:</label>
-                <select id="filtroLiga" class="form-select form-select-sm border-secondary-subtle" style="width: auto;">
-                    <option value="todos" selected>Todos</option>
-                    <option value="laliga">LALIGA EA SPORTS</option>
-                    <option value="MX">La Liga MX</option>
-                </select>
-            </div>
-            <div class="col position-relative overflow-hidden p-2 pe-4">
-                <div id="carouselPartidos" class="carousel slide" data-bs-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-2 px-1">
-                                    <div class="fw-bold text-dark small d-flex align-items-center" style="font-size: 0.8rem;">
-                                        <i class="bi bi-dribbble me-1"></i> LALIGA EA SPORTS
-                                    </div>
-                                    <a href="#" class="text-primary text-decoration-none small fw-semibold" style="font-size: 0.8rem;">Ver todo &gt;</a>
-                                </div>
-                                <div id="partidosScroll" class="partidos-scroll d-flex gap-2 overflow-x-auto pb-1 no-scrollbar">
-                                    
-                                    <!-- Tarjeta 1: Liga MX -->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm" data-league="MX">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1292.png" alt="América" class="team-logo">
-                                                    <span class="text-primary fw-medium">América</span>
-                                                </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Division: LALIGA -->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm" data-league="laliga">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            13:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="186.png" alt="Real Madrid" class="team-logo">
-                                                    <span class="text-primary fw-medium">R. Madrid</span>
-                                                </div>
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="853.png" alt="Barcelona" class="team-logo">
-                                                    <span class="text-primary fw-medium">Cruz Azul</span>
-                                                </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- División: Liga MX -->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm" data-league="MX">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            15:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1294.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Tigres</span>
-                                                </div>
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1291.png" alt="América" class="team-logo">
-                                                    <span class="text-primary fw-medium">Lucenec</span>
-                                                </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- División LALIGA -->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm" data-league="laliga">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            17:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1283.png" alt="Atlético" class="team-logo">
-                                                    <span class="text-primary fw-medium">Chivas</span>
-                                                </div>
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1284.png" alt="Sevilla" class="team-logo">
-                                                    <span class="text-primary fw-medium">Atlas FC</span>
-                                                </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Tarjeta 5: Liga MX -->
-                                    <div class="card match-card border rounded-3 p-2 shadow-sm" data-league="MX">
-                                        <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
-                                            19:00 <span class="text-muted fw-normal ms-1">DAZN</span>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center my-1">
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="1297.png" alt="Pumas" class="team-logo">
-                                                    <span class="text-primary fw-medium">Pumas</span>
-                                                </div>
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="186.png" alt="América" class="team-logo">
-                                                    <span class="text-primary fw-medium">R. Madrid</span>
-                                                </div>
-                                            </div>
-                                            <div class="score-box d-flex flex-column text-end fw-bold ps-2" style="font-size: 0.75rem;">
-                                                <span>-</span>
-                                                <span>-</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex gap-2 align-items-center p-3">
-                                <p class="text-muted mb-0 small">Cargando más partidos...</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                
-                <button class="btn-scroll-prev carousel-control-custom carousel-control-prev-custom position-absolute start-0 border-0 text-white d-flex align-items-center justify-content-center p-0 d-none" 
-                        type="button" data-dir="-1"
-                        style="top: 50%; transform: translateY(-50%); height: 35%; width: 26px; background-color: rgba(180, 180, 180, 0.85); border-radius: 0 3px 3px 0; z-index: 5;">
-                    <i class="bi bi-chevron-left fs-6"></i>
-                </button>
-
-                <button class="btn-scroll-next carousel-control-custom carousel-control-next-custom position-absolute end-0 border-0 text-white d-flex align-items-center justify-content-center p-0" 
-                        type="button" data-dir="1"
-                        style="top: 50%; transform: translateY(-50%); height: 35%; width: 26px; background-color: rgba(180, 180, 180, 0.85); border-radius: 3px 0 0 3px; z-index: 5;">
-                    <i class="bi bi-chevron-right fs-6"></i>
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const scrollContainer = document.getElementById('partidosScroll');
-    const btnNext = document.querySelector('.btn-scroll-next');
-    const btnPrev = document.querySelector('.btn-scroll-prev');
-    const filterSelect = document.getElementById('filtroLiga');
-
-    const scrollStep = 220;
-
-    btnNext?.addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: scrollStep, behavior: 'smooth' });
-    });
-
-    btnPrev?.addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-    });
-
-    scrollContainer?.addEventListener('scroll', () => {
-        if (scrollContainer.scrollLeft > 10) {
-            btnPrev.classList.remove('d-none');
-        } else {
-            btnPrev.classList.add('d-none');
-        }
-    });
-    filterSelect?.addEventListener('change', (e) => {
-        const selectedVal = e.target.value;
-        const cards = scrollContainer.querySelectorAll('.match-card');
-
-        cards.forEach(card => {
-            const cardLeague = card.getAttribute('data-league');
-            if (selectedVal === 'todos' || cardLeague === selectedVal) {
-                card.classList.remove('d-none');
-            } else {
-                card.classList.add('d-none');
-            }
-        });
-
-        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
-    });
-});
-</script>
-    </section>
     <header>
-        <div class="nav">
-            <div class="header">
-                <nav>
-                    <ul class="nav-links">
-                        <li>
-                            <a href="#" data-menu-section-path="#submenuFutbol" data-menu-active="futbol" class="highlight">Fútbol</a>
-                            <div class="main-tab-container" id="submenuFutbol">
-                                <ul class="tab-content">
-                                    <li class="tab-column  tab-column-main"style="width: 25%">
-                                        <span>España</span>
-                                        <ul>
-                                            <li class="tab-list"></li>
-                                        </ul>
-                                    </li>
+        <div id="site-header">
+            <div class="ticker-bar d-flex align-items-center">
+                <div class="ticker-label">Es noticia:</div>
+                <div class="ticker-overflow">
+                    <div class="ticker-track">
+                        <a class="ticker-item" href="#">Valverde</a>
+                        <a class="ticker-item" href="#">Real Madrid femenino</a>
+                        <a class="ticker-item" href="#">Topuria</a>
+                        <a class="ticker-item" href="#">De la Fuente</a>
+                        <a class="ticker-item" href="#">Tebas Real Madrid</a>
+                        <a class="ticker-item" href="#">Real Madrid - PSG donde ver</a>
+                        <a class="ticker-item" href="#">JJ Gabriel</a>
+                        <a class="ticker-item" href="#">Juanma Castano</a>
+                        <a class="ticker-item" href="#">Hipotecas</a>
+                        <a class="ticker-item" href="#">Benjamin Noval</a>
+                        <a class="ticker-item" href="#">Horoscopo</a>
+                        <a class="ticker-item" href="#">Lentejas</a>
+                        <a class="ticker-item" href="#">Ley de Propiedad Horizontal</a>
+                        <!-- duplicate for seamless loop -->
+                        <a class="ticker-item" href="#">Valverde</a>
+                        <a class="ticker-item" href="#">Real Madrid femenino</a>
+                        <a class="ticker-item" href="#">Topuria</a>
+                        <a class="ticker-item" href="#">De la Fuente</a>
+                        <a class="ticker-item" href="#">Tebas Real Madrid</a>
+                        <a class="ticker-item" href="#">Real Madrid - PSG donde ver</a>
+                        <a class="ticker-item" href="#">JJ Gabriel</a>
+                        <a class="ticker-item" href="#">Juanma Castano</a>
+                        <a class="ticker-item" href="#">Hipotecas</a>
+                        <a class="ticker-item" href="#">Benjamin Noval</a>
+                        <a class="ticker-item" href="#">Horoscopo</a>
+                        <a class="ticker-item" href="#">Lentejas</a>
+                        <a class="ticker-item" href="#">Ley de Propiedad Horizontal</a>
+                    </div>
+                </div>
+            </div>
+            <div class="top-bar d-flex align-items-center">
+                <div class="container-xl d-flex align-items-center position-relative">
+                    <ul class="main-site-highlights">
+                        <li class="highlight-cover">
+                            <a href="https://www.marca.com/multimedia/primeras/26/09/0922.html?intcmp=BOTONPORTADA&amp;s_kw=portada-del-dia"
+                                title="El derbi de nunca acabar">
+                                <img src="https://objetos.estaticos-marca.com/imagenes/2026/09/22/portada/marca_papel/1790028891_extras_primera_papel_0.jpg"
+                                    alt="El derbi de nunca acabar">
+                                <strong>La portada de hoy</strong>
+                            </a>
+                        </li>
+                        <li class="main-highlight-radio">
+                            <a href="https://www.marca.com/radio.html?intcmp=BOTONPORTADA&amp;s_kw=radiomarca">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="41" viewBox="0 -0.5 46 41">
+                                    <path fill="none" d="M0-.5h46v41H0z"></path>
+                                    <circle fill="#005CB9" cx="22.938" cy="20" r="20"></circle>
+                                    <path d="M11.816 10.769v1.889c-.072.02-.185.039-.34.059-.154.02-.306.029-.458.029-.15 0-.283-.012-.398-.034a.7.7 
+                                0 0 1-.286-.123.546.546 0 0 1-.171-.246 1.183 1.183 0 0 1-.06-.413V7.295c0-.138.038-.244.114-.32a.798.798 0 0 1 
+                                .31-.182c.223-.079.482-.136.777-.172.295-.037.61-.055.944-.055.906 0 1.587.191 2.046.571.459.38.689.896.689 1.544 
+                                0 .407-.105.753-.315 1.043-.21.288-.459.511-.748.668.236.322.469.624.699.906.229.282.41.538.541.768a.889.889 0 0 
+                                1-.359.503 1.032 1.032 0 0 1-.585.175c-.145 0-.269-.016-.374-.049a.907.907 0 0 1-.275-.136 1.065 1.065 0 0 
+                                1-.217-.213 2.687 2.687 0 0 1-.187-.271l-.826-1.309h-.521v.003zm.62-1.309c.25 0 .446-.064.591-.192.144-.128.216-.316.216-.566 
+                                0-.249-.08-.438-.241-.565-.161-.128-.415-.191-.762-.191-.098 0-.178.003-.236.009a3.322 3.322 0 0 
+                                0-.197.03V9.46h.629zm4.69-2.617a2.08 2.08 0 0 1 .507-.187c.227-.059.454-.089.685-.089.328 0 
+                                .618.048.87.143.253.096.415.244.488.448.117.341.246.737.384 1.191a108.307 108.307 0 0 1 .815 
+                                2.828c.132.468.247.884.346 1.245a.824.824 0 0 1-.355.222 1.707 1.707 0 0 1-.56.083 1.67 1.67 0 0 
+                                1-.399-.04.713.713 0 0 1-.265-.118.577.577 0 0 1-.168-.207 1.877 1.877 0 0 1-.113-.295l-.177-.679h-1.781c-.053.197-.104.4-.157.611a57.89 
+                                57.89 0 0 1-.157.609 1.77 1.77 0 0 1-.66.118c-.335 0-.583-.058-.743-.172a.554.554 0 0 
+                                1-.241-.478c0-.092.013-.184.04-.276.026-.091.056-.2.088-.325.046-.177.11-.396.192-.659.082-.262.172-.546.27-.851.099-.306.204-.619.315-.94l.314-.91a34.676 
+                                34.676 0 0 1 .462-1.272zm1.182 1.269c-.092.275-.195.582-.311.92-.115.337-.218.68-.31 1.028h1.22a65.662 65.662 0 
+                                0 0-.541-1.948h-.058zm5.546 4.614h-.382c-.145 0-.293-.01-.449-.03a7.481 7.481 0 0 1-.461-.074 2.35 2.35 0 0 
+                                1-.428-.123c-.362-.138-.541-.378-.541-.72V7.178c0-.138.038-.245.113-.321a.805.805 0 0 1 .311-.182 4.13 4.13 0 0 
+                                1 .895-.183c.314-.029.597-.044.846-.044.513 0 .976.062 1.392.188.416.124.774.315 
+                                1.074.574.297.259.528.584.692.977.164.394.246.859.246 1.396 0 .524-.079.981-.236 
+                                1.371-.157.39-.383.717-.674.982a2.817 2.817 0 0 1-1.048.594c-.409.13-.858.196-1.35.196zm-.551-1.427a3.67 
+                                3.67 0 0 0 .56.049c.223 0 .427-.032.615-.098.187-.066.348-.167.481-.304.134-.137.239-.315.315-.535.074-.219.113-.482.113-.79 
+                                0-.588-.139-1.031-.414-1.329-.274-.297-.643-.447-1.102-.447h-.28c-.096 0-.192.01-.29.029v3.425zm6.166 1.358c-.072.02-.186.039-.339.059s-.307.029-.458.029c-.152 
+                                0-.283-.012-.398-.034a.732.732 0 0 1-.289-.123.521.521 0 0 1-.178-.246 1.21 1.21 0 0 
+                                1-.059-.413V6.735c.072-.014.188-.032.344-.055.158-.022.309-.036.452-.036.151 0 .284.013.399.036a.696.696 0 0 1 
+                                .289.123.535.535 0 0 1 .178.246c.04.105.059.242.059.413v5.195zm.51-3.07c0-.512.08-.965.242-1.357.16-.395.379-.723.658-.99.279-.265.605-.466.982-.604a3.514 
+                                3.514 0 0 1 1.226-.208c.438 0 .849.069 1.226.208.377.138.707.339.989.604.281.267.503.595.664.99.16.393.241.846.241 1.357s-.08.966-.236 1.362a2.748 2.748 0 0 
+                                1-.654.994 2.799 2.799 0 0 1-.988.605c-.38.138-.793.207-1.24.207-.445 0-.859-.07-1.24-.212a2.767 2.767 0 0 
+                                1-.982-.614c-.275-.269-.492-.601-.649-.994s-.239-.842-.239-1.348zm1.77 0c0 
+                                .597.122 1.043.364 1.338s.568.442.975.442c.413 0 .741-.147.984-.442.242-.295.363-.741.363-1.338 
+                                0-.591-.119-1.033-.358-1.328-.24-.295-.565-.443-.979-.443-.406 0-.732.146-.979.438s-.37.737-.37 1.333zM42.762 
+                                27.65L23 28.768 3.237 27.65a.721.721 0 0 1-.707-.56L.693 14.965a.7.7 0 0 1 .679-.854h43.253c.445 0 
+                                .775.416.68.854l-1.836 12.126a.722.722 0 0 1-.707.559z" fill="#FFF"></path>
+                                    <path fill="#005CB9"
+                                        d="M23 29.093l-.019-.001-19.753-1.117a1.04 1.04 0 0 1-1.015-.812l-.005-.022L.374 15.023a1.024 1.024 0 0 1 .999-1.237h43.253a1.026 1.026 0 0 1 1 1.236L43.789 27.15l-.003.012a1.04 1.04 0 0 1-1.015.812L23 29.093zM2.85 27.03a.4.4 0 0 0 .387.295h.019L23 28.441l19.752-1.117h.012a.401.401 0 0 0 .387-.295l1.836-12.124.004-.011a.392.392 0 0 0-.075-.32.37.37 0 0 0-.288-.139H1.373a.372.372 0 0 0-.288.139.384.384 0 0 0-.074.32l.004.021L2.85 27.03z">
+                                    </path>
+                                    <path fill="#E2231A"
+                                        d="M11.919 16.089h2.969v2.042h-.513v5.285h.513v2.054h-3.181v-2.054h.514V20.11l-1.478 4.045-1.44-4.045v3.306h.513v2.054H6.597v-2.054h.513v-5.285h-.527v-2.042h3.082l1.126 3.168 1.128-3.168zm9.356 7.327h.375v2.054h-2.93v-2.054h.389v-.775h-1.353l-.013.775h.375v2.054H15.2v-2.054h.376l1.177-7.339h3.344l1.178 7.339zm-2.379-2.018l-.476-2.904-.451 2.904h.927zm8.854 2.004h.516v2.067h-2.793v-3.743h-.677v1.676h.363v2.067H21.99v-2.067h.5v-5.284h-.5V16.09h4.796l.964.989v2.931l-.789.789.789.79v1.813zm-2.279-5.284h-.688v2.143h.688v-2.143zm7.289-2.029l.979.989v2.893h-2.268v-1.816l-.688-.013v5.272h.688v-1.828h2.268v2.88l-.979 1.004h-3.244l-.953-1.001v-7.39l.953-.989 3.244-.001zm7.74 7.327v2.054h-2.918v-2.054h.376v-.775h-1.354l-.012.775h.376v2.054h-2.905v-2.054h.363l1.178-7.339h3.344l1.177 7.339h.375zm-2.755-2.018l-.476-2.904-.451 2.904h.927z">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M21.172 30.626l.129-.646a.254.254 0 0 1 .294-.194c1.115.188 1.693.188 2.807 0a.255.255 0 0 1 .295.194l.129.646c.025.133-.078.267-.232.292-1.267.214-1.923.214-3.19 0-.154-.025-.258-.159-.232-.292zm-1.276 1.661l.187-.63c.039-.13.199-.196.357-.154 1.673.442 3.447.442 5.121 0 .157-.042.317.024.355.154.076.251.113.378.188.63.039.129-.072.279-.25.326a11.222 11.222 0 0 1-5.708 0c-.177-.049-.289-.197-.25-.326z">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M18.236 33.77l.252-.606c.051-.125.238-.166.417-.099 2.568 1.033 5.619.973 8.188 0 .179-.067.365-.026.417.099l.252.606c.051.125-.066.293-.263.369-3.188.969-5.827.963-9.001 0-.196-.077-.313-.244-.262-.369zm2.872 2.664l.088-.651c.019-.134.208-.22.422-.196 1.102.116 1.661.116 2.762 0 .214-.023.404.062.422.196l.089.651c.019.133-.158.269-.392.293-1.197.125-1.805.125-3.003 0-.231-.025-.406-.161-.388-.293zm-1.892 1.748l.158-.64c.033-.13.251-.188.488-.137 2.198.348 4.076.348 6.275 0 .235-.052.454.007.487.137l.159.64c.033.129-.146.289-.402.346-2.208.514-4.553.451-6.762 0-.255-.058-.435-.217-.403-.346z">
 
-                                    <li class="tab-column" style="width: 50%"></li>
-                                    <li class="tab-column" style="width: 25%"></li>
-                                </ul>
+                                    </path>
+                                </svg>
+                                <strong class="radio-heading">Radio MARCA</strong>
+                            </a>
+                        </li>
+                        <li class="patrocinio">
+                            <a href="https://cuidateplus.marca.com" title="CuídatePlus.com">
+                                <svg style="height:46px;width:46px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 257.986 250.113">
+                                    <circle fill="#0878b7" cx="130.134" cy="125.196" r="120.64" />
+                                    <g fill="#fff">
+                                        <path
+                                            d="M138.339 173.785c0-6.267-5.161-8.109-11.057-8.109h-4.426c-5.53 0-9.954 1.844-11.058 6.638V174.525c0 2.95-1.106 9.953-8.111 9.953-8.479 0-11.06-6.267-11.06-22.488 0-16.588 1.107-25.804 9.957-25.804 7.373 0 8.847 4.791 8.847 7.741v3.686c0 6.268 5.162 8.111 11.06 8.111h4.424c6.267 0 11.057-2.215 11.057-8.111v-12.534c0-14.747-10.688-24.7-29.493-26.912 0 0 8.849-10.323 17.328-17.696 8.849-7.374 7.004-11.06 3.316-16.222-4.057-5.162-9.584-5.162-16.958 1.477-7.374 6.267-21.013 18.432-29.126 33.917 0 0 1.105-14.01 13.272-32.443 0 0 5.161-9.585-3.318-14.745-5.53-2.95-9.954-2.213-13.638 3.317-3.687 5.529-14.012 23.223-15.853 36.126l-2.949-19.169c-.734-4.055-5.528-9.216-12.166-8.11-5.161.736-9.215 7.003-8.11 12.165 1.106 7.005 14.748 88.109 29.126 109.491 5.161 8.109 9.216 17.326 34.285 17.326 10.323 0 30.23-1.103 34.286-29.123.368-2.212.736-7.741.736-7.741v-1.844c-.371-.001-.371-1.108-.371-1.108z" />
+                                        <path
+                                            d="M209.859 67.982h-18.433V49.548c0-4.424-3.687-8.11-8.109-8.11h-10.323c-4.424 0-8.107 3.686-8.107 8.11v18.434H146.45c-4.425 0-8.111 3.685-8.111 8.111v10.32c0 4.426 3.687 8.112 8.111 8.112h18.432v18.433c0 4.423 3.685 8.107 8.107 8.107h10.323c4.423 0 8.109-3.685 8.109-8.107V94.524h18.432c4.426 0 8.109-3.685 8.109-8.112v-10.32c.006-4.424-3.68-8.11-8.103-8.11z" />
+                                    </g>
+                                </svg>
+                                <strong>CuídatePlus</strong>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="brand-logo position-absolute start-50 translate-middle-x" aria-label="MARCA">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173 50" fill="#cc0000" role="img">
+                            <path
+                                d="M27.9 1.4h15v10.3h-2.6v26.6h2.6v10.4h-16V38.3h2.5V21.7L22 42l-7.3-20.3v16.6h2.6v10.4H1.1V38.3h2.6V11.7H1V1.4h15.6l5.6 16" />
+                            <path
+                                d="M75.1 38.3l-5.9-37H52.3l-5.9 37h-1.9v10.3h14.7V38.3h-1.9l.1-3.9h6.8v3.9h-2v10.3H77V38.3h-1.9zM58.4 28.2l2.3-14.6 2.4 14.6h-4.7z" />
+                            <path
+                                d="M107.7 38.3v-9.2l-4-4 4-4V6.4l-4.9-5H78.7v10.2h2.5v26.6h-2.5v10.4h16V38.3h-1.8v-8.5h3.4v18.9h14.1V38.3h-2.7zM96.2 22.4h-3.5V11.6h3.5v10.8z" />
+                            <path
+                                d="M132.9 1.4l5 5V21h-11.5v-9.2l-3.4-.1v26.6h3.4v-9.2h11.5v14.5l-5 5.1h-16.3l-4.8-5.1V6.4l4.8-5" />
+                            <path
+                                d="M170.1 38.3l-5.9-37h-16.8l-5.9 37h-1.8v10.3h14.6V38.3h-1.9l.1-3.9h6.8v3.9h-1.9v10.3H172V38.3h-1.9zm-16.7-10.1l2.3-14.6 2.4 14.6h-4.7z" />
+                        </svg>
+                    </a>
+
+                    <div class="d-flex align-items-center gap-2 ms-auto">
+                        <div class="dropdown">
+                            <button class="edition-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="editionDropdown">
+                                <span class="fi fi-es" style="border-radius:2px;"></span>
+                                <span>Espa&#241;a</span>
+                            </button>
+                            <ul class="dropdown-menu shadow-sm border-0 py-1" aria-labelledby="editionDropdown"
+                                style="min-width:160px;font-size:.8rem;">
+                                <li class="px-2 py-1"
+                                    style="font-size:.65rem;font-weight:700;text-transform:uppercase;color:#999;letter-spacing:.5px;">
+                                    Ediciones:</li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2 active" href="#"><span
+                                            class="fi fi-es" style="border-radius:2px;"></span> España</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><span
+                                            class="fi fi-mx" style="border-radius:2px;"></span> México</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><span
+                                            class="fi fi-us" style="border-radius:2px;"></span> USA - English</a></li>
+                                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><span
+                                            class="fi fi-us" style="border-radius:2px;"></span> USA - Español</a></li>
+                            </ul>
+                        </div>
+                        <a href="https://www.marca.com/club-marca.html" class="club-marca-btn"
+                            aria-label="Hazte socio de CLUB MARCA">
+                            <svg class="cm-logo-sm" role="img" aria-hidden="true" width="32" height="22"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 33 22">
+                                <g class="marca" fill="#C00C00">
+                                    <path fill-rule="evenodd"
+                                        d="m4.525 20.742-1.374-3.84v3.135h.49v1.954H.577v-1.954h.49v-5.012h-.5v-1.944l2.93-.01 1.076 3.03 1.085-3.03 2.872.01v1.944h-.49v5.012h.49v1.954H5.466v-1.954h.49v-3.135l-1.431 3.84Z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="m13.524 13.072 1.143 6.965h.356v1.954h-2.834v-1.954h.365v-.734h-1.316v.734h.365v1.954H8.78v-1.954h.356l1.143-6.965h3.247Zm-1.172 5.06-.451-2.754-.442 2.753h.893Z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="M24.445 15.035v1.734h2.046v-2.744l-.951-.953h-2.988l-.95.943v7.023l.95.943h2.997l.951-.943v-2.745h-2.046v1.735h-.672v-5.012h.672l-.01.019Z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="M18.644 21.99v-3.535h-.663v1.591h.355V22h-3.063v-1.954h.49v-5.012h-.49v-1.953h4.62l.95.943v2.811l-.768.753.759.753v1.705h.49V22h-2.7l.02-.01Zm-.663-6.965v2.048h.672v-2.048h-.672Z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="m31.486 13.072 1.143 6.965h.355v1.954H30.15v-1.954h.366v-.734H29.2v.734h.365v1.954H26.74v-1.954h.355l1.143-6.965h3.247Zm-1.172 5.06-.452-2.754-.441 2.753h.893Z"
+                                        clip-rule="evenodd" />
+                                </g>
+                                <g class="club" fill="#4F4F4F">
+                                    <path
+                                        d="M4.814 2.593h-1V9.24h1V6.93h3.268v3.627l-1.41 1.257H1.997l-1.41-1.257v-9.3L1.996 0h4.677l1.41 1.256v3.647H4.813v-2.31Z" />
+                                    <path d="M12.125 0v9.219H15.7v2.594H8.857V0h3.268Z" />
+                                    <path
+                                        d="M16.456 0h3.248v9.24h1V0h3.269v10.556l-1.41 1.257h-4.677l-1.409-1.257V0h-.02Z" />
+                                    <path
+                                        d="M24.708 9.219h.735V2.593h-.735V.02h6.883L33 1.276v3.728l-1.145.993 1.124.973v3.627l-1.348 1.236h-6.945V9.239l.02-.02Zm4.024-3.931h1V2.573h-1v2.715Zm0 3.93h1V6.505h-1v2.715Z" />
+                                </g>
+                            </svg>
+                            <svg class="cm-logo-lg" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" width="98" height="14" viewBox="0 0 117 18">
+                                <style>
+                                    :root {
+                                        --cm-st01: #C00C00;
+                                        --cm-st02: #4F4F4F
+                                    }
+                                </style>
+                                <g class="marca">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M60.1275 15.2257L57.4585 7.62222V13.8291H58.4206V17.7084H52.3689V13.8291H53.362V3.89808H52.3689V0.0498047H58.1103L60.2206 6.03946L62.362 0.0498047H68.0103V3.89808H67.0482V13.8291H68.0103V17.7084H61.9896V13.8291H62.9517V7.62222L60.1275 15.2257Z"
+                                        fill="var(--cm-st01)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M77.8172 0.0498047L80.0517 13.8291H80.7655V17.7084H75.2103V13.8291H75.9241V12.3705H73.3482V13.8291H74.062V17.7084H68.5068V13.8291H69.2206L71.4551 0.0498047H77.8172ZM75.5206 10.0429L74.6206 4.58084L73.7517 10.0429H75.5206Z"
+                                        fill="var(--cm-st01)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M99.262 3.92912V7.37394H103.265V1.94291L101.403 0.0498047H95.5379L93.6758 1.91187V15.8153L95.5379 17.6774H101.403L103.265 15.8153V10.3843H99.231V13.8291H97.8965V3.89808H99.231L99.262 3.92912Z"
+                                        fill="var(--cm-st01)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M87.8723 17.7084V10.6946H86.5689V13.8291H87.2827V17.7084H81.262V13.8291H82.224V3.89808H81.262V0.0498047H90.3551L92.2171 1.91187V7.46705L90.7275 8.9567L92.2171 10.4464V13.8291H93.1792V17.6774H87.9033L87.8723 17.7084ZM86.5689 3.89808V7.9636H87.8723V3.89808H86.5689Z"
+                                        fill="var(--cm-st01)" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M113.103 0.0498047L115.338 13.8291H116.052V17.7084H110.496V13.8291H111.21V12.3705H108.634V13.8291H109.348V17.7084H103.793V13.8291H104.507L106.741 0.0498047H113.103ZM110.776 10.0429L109.876 4.58084L109.007 10.0429H110.776Z"
+                                        fill="var(--cm-st01)" />
+                                </g>
+                                <g class="club">
+                                    <path
+                                        d="M7.46505 3.94874H5.95331V13.9341H7.46505V10.4731H12.3185V15.9233L10.21 17.8328H3.20832L1.09985 15.9233V1.95962L3.20832 0.0898438H10.21L12.3185 1.95962V7.4496H7.46505V3.98852V3.94874Z"
+                                        fill="var(--cm-st02)" />
+                                    <path d="M18.4052 0.0498047V13.8941H23.7361V17.7928H13.5518V0.0498047H18.4052Z"
+                                        fill="var(--cm-st02)" />
+                                    <path
+                                        d="M24.8501 0.0498047H29.7036V13.9339H31.2153V0.0498047H36.0687V15.923L33.9603 17.7928H26.9586L24.8501 15.923V0.0498047Z"
+                                        fill="var(--cm-st02)" />
+                                    <path
+                                        d="M37.1428 13.8941H38.2567V3.9087H37.1428V0.0498047H47.4067L49.5152 1.91958V7.52891L47.8045 9.04064L49.4754 10.5126V15.9628L47.4863 17.8326H37.1428V13.9339V13.8941ZM43.15 7.96651H44.6617V3.9087H43.15V7.96651ZM43.15 13.8941H44.6617V9.83629H43.15V13.8941Z"
+                                        fill="var(--cm-st02)" />
+                                </g>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="login-btn" title="Iniciar sesión">
+                            <i class="icon-login">
+                                <svg role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 19 18" width="19" height="18">
+                                    <path stroke="#4f4f4f" stroke-width="1.5"
+                                        d="M9.253 9.617c1.964 0 3.556-1.58 3.556-3.529 0-1.95-1.592-3.53-3.556-3.53-1.963 0-3.555 1.58-3.555 3.53 0 1.95 1.592 3.53 3.555 3.53Z" />
+                                    <path stroke="#4f4f4f" stroke-width="1.5"
+                                        d="M16.096 17.582c-.813-3.308-3.45-5.714-6.576-5.714-3.218 0-5.916 2.548-6.642 6.005" />
+                                </svg>
+                            </i>
+                            <span>Iniciar sesión</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Navegacion principal">
+                <div class="container-xl">
+                    <ul class="nav-list">
+
+                        <!-- ═══ FUTBOL (MEGA MENU - 3 cols) ═══════════════════════ -->
+                        <li class="ni mega-parent">
+                            <span class="nl">F&#250;tbol <span class="ch">&#9660;</span></span>
+                            <div class="dropdown-panel mega-panel">
+                                <div class="container-xl">
+                                    <div class="mega-grid mega-grid-1-2-1">
+
+                                        <!-- Col 1: España -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">Espa&#241;a</div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">LALIGA EA Sports</a>
+                                                <div class="m-links"><a href="#">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#">Clasificaci&#243;n</a><span
+                                                        class="m-sep">/</span><a href="#">Equipos</a></div>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Liga F Moeve</a>
+                                                <div class="m-links"><a href="#">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#">Clasificaci&#243;n</a></div>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">LALIGA Hypermotion</a>
+                                                <div class="m-links"><a href="#">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#">Clasificaci&#243;n</a><span
+                                                        class="m-sep">/</span><a href="#">Equipos</a></div>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Primera
+                                                    Federaci&#243;n</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Segunda
+                                                    Federaci&#243;n</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Tercera
+                                                    Federaci&#243;n</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Copa del Rey</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Copa de la
+                                                    Reina</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">M&#225;s
+                                                    f&#250;tbol</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Supercopa de
+                                                    Espa&#241;a</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Supercopa de
+                                                    Espa&#241;a femenina</a></div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Selecci&#243;n Espa&#241;ola</a>
+                                                <div class="m-links"><a href="#">UEFA Nations League</a></div>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title light">Selecci&#243;n Espa&#241;ola
+                                                    femenina</a>
+                                                <div class="m-links"><a href="#">Eurocopa</a></div>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">F&#250;tbol
+                                                    Sala</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Premios MARCA de
+                                                    F&#250;tbol</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">FootHistoria</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Col 2: Internacional y Mundial -->
+                                        <div class="m-col d-flex">
+                                            <!-- Col 2-1: Internacional -->
+                                            <div class="w-50 pe-3">
+                                                <div class="m-col-title"><a href="#">Internacional</a> <span
+                                                        style="font-size:.65rem;">&#8250;</span></div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title">Premier League</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a
+                                                            href="#">Clasificaci&#243;n</a><span
+                                                            class="m-sep">/</span><a href="#">Equipos</a></div>
+                                                </div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title">Bundesliga</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a
+                                                            href="#">Clasificaci&#243;n</a><span
+                                                            class="m-sep">/</span><a href="#">Equipos</a></div>
+                                                </div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title">Serie A</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a
+                                                            href="#">Clasificaci&#243;n</a><span
+                                                            class="m-sep">/</span><a href="#">Equipos</a></div>
+                                                </div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title">Ligue 1</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a
+                                                            href="#">Clasificaci&#243;n</a><span
+                                                            class="m-sep">/</span><a href="#">Equipos</a></div>
+                                                </div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title">Primera Liga de Portugal</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a
+                                                            href="#">Clasificaci&#243;n</a><span
+                                                            class="m-sep">/</span><a href="#">Equipos</a></div>
+                                                </div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Liga
+                                                        Saud&#237;</a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Col 2-2: Mundial -->
+                                            <div class="w-50 ps-3">
+                                                <div class="m-col-title" style="margin-bottom:10px;">Mundial</div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title">Mundial</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a href="#">Fase de grupos</a><span
+                                                            class="m-sep">/</span><a href="#">Resultados</a></div>
+                                                </div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title">Champions League</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a
+                                                            href="#">Clasificaci&#243;n</a><span
+                                                            class="m-sep">/</span><a href="#">Equipos</a></div>
+                                                </div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title light">Champions League femenina</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a href="#">Clasificaci&#243;n</a>
+                                                    </div>
+                                                </div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title">Europa League</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a
+                                                            href="#">Clasificaci&#243;n</a><span
+                                                            class="m-sep">/</span><a href="#">Equipos</a></div>
+                                                </div>
+                                                <div class="m-sec">
+                                                    <a href="#" class="m-sec-title light">Conference League</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a
+                                                            href="#">Clasificaci&#243;n</a><span
+                                                            class="m-sep">/</span><a href="#">Equipos</a></div>
+                                                </div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Youth
+                                                        League</a>
+                                                    <div class="m-links"><a href="#">Calendario</a><span
+                                                            class="m-sep">/</span><a href="#">Clasificaci&#243;n</a>
+                                                    </div>
+                                                </div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Supercopa de
+                                                        Europa</a></div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Copa
+                                                        Intercontinental</a></div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Mundial de
+                                                        Clubes</a></div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Mundial
+                                                        Femenino</a></div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Mundial Sub
+                                                        20</a>
+                                                </div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Mundial Sub
+                                                        17</a>
+                                                </div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">EURO 2024</a>
+                                                </div>
+                                                <div class="m-sec"><a href="#" class="m-sec-title light">Copa
+                                                        &#193;frica</a></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Col 3: America -->
+                                        <div class="m-col">
+                                            <div class="m-col-title"><a href="#">Am&#233;rica</a> <span
+                                                    style="font-size:.65rem;">&#8250;</span></div>
+                                            <ul class="m-list">
+                                                <li><a href="#" class="ml-main">Argentina</a> <span
+                                                        class="m-sep">&#183;</span> <a href="#"
+                                                        class="ml-sub">Calendario</a><span class="m-sep">/</span><a
+                                                        href="#" class="ml-sub">Clasificaci&#243;n</a></li>
+                                                <li><a href="#" class="ml-main">Chile</a> <span
+                                                        class="m-sep">&#183;</span>
+                                                    <a href="#" class="ml-sub">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#"
+                                                        class="ml-sub">Clasificaci&#243;n</a>
+                                                </li>
+                                                <li><a href="#" class="ml-main">Colombia</a> <span
+                                                        class="m-sep">&#183;</span> <a href="#"
+                                                        class="ml-sub">Calendario</a><span class="m-sep">/</span><a
+                                                        href="#" class="ml-sub">Clasificaci&#243;n</a></li>
+                                                <li><a href="#" class="ml-main">Estados Unidos</a> <span
+                                                        class="m-sep">&#183;</span> <a href="#"
+                                                        class="ml-sub">Calendario</a><span class="m-sep">/</span><a
+                                                        href="#" class="ml-sub">Clasificaci&#243;n</a></li>
+                                                <li><a href="#" class="ml-main">M&#233;xico</a> <span
+                                                        class="m-sep">&#183;</span> <a href="#"
+                                                        class="ml-sub">Calendario</a><span class="m-sep">/</span><a
+                                                        href="#" class="ml-sub">Clasificaci&#243;n</a></li>
+                                                <li><a href="#" class="ml-main">Venezuela</a> <span
+                                                        class="m-sep">&#183;</span> <a href="#"
+                                                        class="ml-sub">Calendario</a><span class="m-sep">/</span><a
+                                                        href="#" class="ml-sub">Clasificaci&#243;n</a></li>
+                                                <li style="margin-top:12px;"><a href="#" class="ml-main">Leagues Cup</a>
+                                                    <span class="m-sep">&#183;</span> <a href="#"
+                                                        class="ml-sub">Calendario</a><span class="m-sep">/</span><a
+                                                        href="#" class="ml-sub">Clasificaci&#243;n</a>
+                                                </li>
+                                                <li><a href="#" class="ml-main">CONMEBOL Libertadores</a> <span
+                                                        class="m-sep">&#183;</span> <a href="#"
+                                                        class="ml-sub">Calendario</a><span class="m-sep">/</span><a
+                                                        href="#" class="ml-sub">Clasificaci&#243;n</a></li>
+                                                <li><a href="#" class="ml-main">Copa Am&#233;rica</a></li>
+                                                <li style="margin-top:10px;"><a href="#" class="ml-sub"
+                                                        style="color:rgba(255,255,255,.4);">M&#225;s Am&#233;rica</a>
+                                                </li>
+                                                <li><a href="#" class="ml-sub"
+                                                        style="color:rgba(255,255,255,.3);">Campeonato
+                                                        Brasileiro</a><span class="m-sep">/</span><a href="#"
+                                                        class="ml-sub" style="color:rgba(255,255,255,.3);">Liga
+                                                        Bolivia</a></li>
+                                                <li><a href="#" class="ml-sub"
+                                                        style="color:rgba(255,255,255,.3);">Paraguayan Primera
+                                                        Divisi&#243;n</a></li>
+                                                <li><a href="#" class="ml-sub"
+                                                        style="color:rgba(255,255,255,.3);">Primera
+                                                        Divisi&#243;n del Per&#250;</a><span class="m-sep">/</span><a
+                                                        href="#" class="ml-sub"
+                                                        style="color:rgba(255,255,255,.3);">Serie A
+                                                        de Ecuador</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div><!-- /mega-grid -->
+                                </div><!-- /container-xl -->
+                            </div><!-- /dropdown-panel -->
+                        </li>
+
+                        <!-- ═══ BALONCESTO (MEGA MENU - 3 cols) ════════════════════ -->
+                        <li class="ni mega-parent">
+                            <span class="nl">Baloncesto <span class="ch">&#9660;</span></span>
+                            <div class="dropdown-panel mega-panel">
+                                <div class="container-xl">
+                                    <div class="mega-grid mega-grid-3">
+
+                                        <!-- Col 1: Espana -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">Espa&#241;a</div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Liga Endesa</a>
+                                                <div class="m-links"><a href="#">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#">Clasificaci&#243;n</a></div>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Liga Endesa
+                                                    femenina</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Primera FEB</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Segunda FEB</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Copa del Rey</a>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title light"
+                                                    style="color:var(--marca-red);font-size:.68rem;font-weight:400;">Cuadro
+                                                    y resultados</a>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Supercopa Endesa</a>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title light"
+                                                    style="color:var(--marca-red);font-size:.68rem;font-weight:400;">Cuadro
+                                                    y resultados</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Basket FEB</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Selecci&#243;n</a></div>
+                                        </div>
+
+                                        <!-- Col 2: Europa -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">Europa</div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Eurobasket</a>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Euroliga</a>
+                                                <div class="m-links"><a href="#">Clasificaci&#243;n</a><span
+                                                        class="m-sep">/</span><a href="#">Calendario</a></div>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Euroliga
+                                                    femenina</a>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Eurocup</a>
+                                                <div class="m-links" style="margin-top:2px;"><a href="#"
+                                                        style="color:rgba(255,255,255,.4);font-size:.68rem;">Resultados
+                                                        y
+                                                        Clasificaci&#243;n</a></div>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">FIBA Champions League</a>
+                                                <div class="m-links" style="margin-top:2px;"><a href="#"
+                                                        style="color:rgba(255,255,255,.4);font-size:.68rem;">Resultados
+                                                        y
+                                                        Clasificaci&#243;n</a></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Col 3: Internacional -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">Internacional</div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">NBA</a>
+                                                <div class="m-links"><a href="#">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#">Clasificaciones</a><span
+                                                        class="m-sep">/</span><a href="#">Equipos</a></div>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Mundial 2023</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li><a href="#">Baloncesto</a></li>
-                        <li><a href="#">Motor</a></li>
-                        <li><a href="#">Polideportivo</a></li>
-                        <li><a href="#">Coches</a></li>
-                        <li>
-                            <ul class="sub-menu">
-                                <li><a href="#">Ultima hora</a></li>
-                                <li><a href="#">MARCA Entradas</a></li>
-                                <li><a href="#">Agenda TV</a></li>
-                            </ul>
+
+                        <!-- ═══ MOTOR (MEGA MENU - 3 cols) ═══════════════════════ -->
+                        <li class="ni mega-parent">
+                            <span class="nl">Motor <span class="ch">&#9660;</span></span>
+                            <div class="dropdown-panel mega-panel">
+                                <div class="container-xl">
+                                    <div class="mega-grid mega-grid-3">
+
+                                        <!-- Col 1: Coches (F1, Rallies) -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">Coches</div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">F&#243;rmula 1</a>
+                                                <div class="m-links"><a href="#">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#">Clasificaci&#243;n de
+                                                        pilotos</a>
+                                                </div>
+                                                <div class="m-links" style="margin-top:3px;"><a
+                                                        href="#">Clasificaci&#243;n
+                                                        de constructores</a></div>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title light">Grandes Premios de F&#243;rmula
+                                                    1</a>
+                                                <div class="gp-list">
+                                                    <a href="#">Australia</a><span class="gs">/</span><a
+                                                        href="#">China</a><span class="gs">/</span><a
+                                                        href="#">Jap&#243;n</a><span class="gs">/</span><a
+                                                        href="#">Bahrein</a><span class="gs">/</span>
+                                                    <a href="#">Arabia Saud&#237;</a><span class="gs">/</span><a
+                                                        href="#">Miami</a><span class="gs">/</span><a
+                                                        href="#">Canad&#225;</a><span class="gs">/</span><a
+                                                        href="#">M&#243;naco</a><span class="gs">/</span>
+                                                    <a href="#">Barcelona - Catalu&#241;a</a><span class="gs">/</span><a
+                                                        href="#">Austria</a><span class="gs">/</span><a href="#">Gran
+                                                        Breta&#241;a</a><span class="gs">/</span>
+                                                    <a href="#">B&#233;lgica</a><span class="gs">/</span><a
+                                                        href="#">Hungr&#237;a</a><span class="gs">/</span><a
+                                                        href="#">Pa&#237;ses Bajos</a><span class="gs">/</span><a
+                                                        href="#">Italia</a><span class="gs">/</span><a
+                                                        href="#">Espa&#241;a</a><span class="gs">/</span>
+                                                    <a href="#">Azerbaiy&#225;n</a><span class="gs">/</span><a
+                                                        href="#">Bahrein</a><span class="gs">/</span><a
+                                                        href="#">Singapur</a><span class="gs">/</span>
+                                                    <a href="#">Estados Unidos</a><span class="gs">/</span><a
+                                                        href="#">M&#233;xico</a><span class="gs">/</span><a
+                                                        href="#">Brasil</a><span class="gs">/</span><a href="#">Las
+                                                        Vegas</a><span class="gs">/</span>
+                                                    <a href="#">Qatar</a><span class="gs">/</span><a href="#">Abu
+                                                        Dhabi</a>
+                                                </div>
+                                            </div>
+                                            <div class="m-sec" style="margin-top:14px;">
+                                                <a href="#" class="m-sec-title">F&#243;rmula E</a>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Rallies</a>
+                                                <div class="m-links"><a href="#">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#">Clasificaci&#243;n de
+                                                        pilotos</a><span class="m-sep">/</span></div>
+                                                <div class="m-links"><a href="#">Clasificaci&#243;n de equipos</a></div>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Dakar</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">WEC</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Indycar</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">24 Horas de Daytona</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">24 Horas de Le Mans</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Col 2: Motos -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">Motos</div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title">Moto GP</a>
+                                                <div class="m-links"><a href="#">Calendario</a><span
+                                                        class="m-sep">/</span><a href="#">Clasificaci&#243;n de
+                                                        pilotos</a>
+                                                </div>
+                                            </div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title light">Grandes Premios de Moto GP</a>
+                                                <div class="gp-list">
+                                                    <a href="#">Tailandia</a><span class="gs">/</span><a
+                                                        href="#">Brasil</a><span class="gs">/</span><a href="#">Las
+                                                        Am&#233;ricas</a><span class="gs">/</span><a
+                                                        href="#">Qatar</a><span class="gs">/</span>
+                                                    <a href="#">Espa&#241;a</a><span class="gs">/</span><a
+                                                        href="#">Francia</a><span class="gs">/</span><a
+                                                        href="#">Catalu&#241;a</a><span class="gs">/</span><a
+                                                        href="#">Italia</a><span class="gs">/</span><a
+                                                        href="#">Hungr&#237;a</a><span class="gs">/</span>
+                                                    <a href="#">Rep&#250;blica Checa</a><span class="gs">/</span><a
+                                                        href="#">Pa&#237;ses Bajos</a><span class="gs">/</span><a
+                                                        href="#">Alemania</a><span class="gs">/</span>
+                                                    <a href="#">Gran Breta&#241;a</a><span class="gs">/</span><a
+                                                        href="#">Arag&#243;n</a><span class="gs">/</span><a href="#">San
+                                                        Marino</a><span class="gs">/</span><a href="#">Austria</a><span
+                                                        class="gs">/</span>
+                                                    <a href="#">Jap&#243;n</a><span class="gs">/</span><a
+                                                        href="#">Indonesia</a><span class="gs">/</span><a
+                                                        href="#">Australia</a><span class="gs">/</span><a
+                                                        href="#">Malasia</a><span class="gs">/</span>
+                                                    <a href="#">Portugal</a><span class="gs">/</span><a
+                                                        href="#">Valencia</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Col 3: Modelos de coches -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">Modelos de coches</div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Pruebas de coches</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Ocio</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">V&#237;deos</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li><a href="#">MAS +</a></li>
+
+                        <!-- ═══ POLIDEPORTIVO (MEGA MENU - 4 cols) ══════════════════ -->
+                        <li class="ni mega-parent">
+                            <span class="nl">Polideportivo <span class="ch">&#9660;</span></span>
+                            <div class="dropdown-panel mega-panel">
+                                <div class="container-xl">
+                                    <div class="mega-grid mega-grid-4">
+
+                                        <!-- Col 1: Destacamos -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">Destacamos</div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Atletismo</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Balonmano</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Ciclismo</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Golf</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Tenis</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Boxeo</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">P&#225;del</a></div>
+                                        </div>
+
+                                        <!-- Col 2: Otros deportes -->
+                                        <div class="m-col">
+                                            <div class="m-col-title"><a href="#">Otros deportes</a> <span
+                                                    style="font-size:.65rem;">&#8250;</span></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Ajedrez</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Deportes
+                                                    Aventura</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Deportes
+                                                    Invierno</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">eSports</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">H&#237;pica</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Hockey Hierba</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Hockey Patines</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Juegos
+                                                    Ol&#237;mpicos</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Juegos
+                                                    Ol&#237;mpicos
+                                                    de Invierno</a></div>
+                                        </div>
+
+                                        <!-- Col 3 -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">&nbsp;</div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">MMA</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Nataci&#243;n</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">NFL</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">NHL</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Olimpismo</a></div>
+                                            <div class="m-sec"><a href="#"
+                                                    class="m-sec-title light">Paral&#237;mpicos</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Rugby</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Tenis de mesa</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Col 4 -->
+                                        <div class="m-col">
+                                            <div class="m-col-title">&nbsp;</div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Toros</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Triatl&#243;n</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Turf</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">UFC</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Vela</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Voleibol</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Waterpolo</a></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- ═══ COCHES (MEGA MENU - 3 cols) ════════════════════════ -->
+                        <li class="ni mega-parent">
+                            <span class="nl">Coches <span class="ch">&#9660;</span></span>
+                            <div class="dropdown-panel mega-panel">
+                                <div class="container-xl">
+                                    <div class="mega-grid mega-grid-3">
+                                        <div class="m-col">
+                                            <div class="m-col-title">Coches</div>
+                                            <div class="m-sec">
+                                                <a href="#" class="m-sec-title light">El&#233;ctricos</a>
+                                                <span class="m-sep" style="margin:0 4px;"></span>
+                                                <a href="#" class="ml-sub">H&#237;bridos</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title">Motos</a></div>
+                                        </div>
+                                        <div class="m-col">
+                                            <div class="m-col-title">Consejos</div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Mantenimiento</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Seguridad</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Tecnolog&#237;a</a>
+                                            </div>
+                                        </div>
+                                        <div class="m-col">
+                                            <div class="m-col-title">Tr&#225;fico</div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Estado de las
+                                                    carreteras</a></div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Alertas DGT</a>
+                                            </div>
+                                            <div class="m-sec"><a href="#" class="m-sec-title light">Radares</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- ═══ ACCENT ITEMS (no dropdown) ══════════════════════ -->
+                        <li class="ni"><a href="#" class="nl accent">&Uacute;ltima hora</a></li>
+                        <li class="ni"><a href="#" class="nl accent">MARCA Entradas</a></li>
+                        <li class="ni"><a href="#" class="nl accent">Agenda TV</a></li>
+
+                        <!-- ═══ MAS + (simple dropdown, right-aligned) ══════════ -->
+                        <li class="ni">
+                            <span class="nl">M&#225;s +</span>
+                            <div class="simple-panel" style="left:auto;right:0;min-width:190px;">
+                                <a href="#">eSports</a>
+                                <a href="#">V&#237;deos</a>
+                                <a href="#">Podcasts</a>
+                                <a href="#">FootHistoria</a>
+                                <a href="#">Apuestas deportivas</a>
+                                <a href="#">Humor</a>
+                                <a href="#">Horóscopo</a>
+                            </div>
+                        </li>
+
                     </ul>
-                </nav>
+                </div>
+            </nav>
+            <div class="teams-bar">
+                <div class="container-xl h-100">
+                    <div class="teams-scroll" id="teamsScroll">
+                        <!-- Badges from local src/ folder + remote fallbacks -->
+                        <a href="#" class="team-badge" title="Alaves"><img src="src/173.png" alt="Alaves"
+                                onerror="this.src='https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/173.png'"></a>
+                        <a href="#" class="team-badge" title="Athletic Club"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/174.png"
+                                alt="Athletic"></a>
+                        <a href="#" class="team-badge" title="Atletico de Madrid"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/175.png"
+                                alt="Atletico"></a>
+                        <a href="#" class="team-badge" title="Barcelona"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/178.png"
+                                alt="Barcelona"></a>
+                        <a href="#" class="team-badge" title="Real Madrid"><img src="src/186.png" alt="Real Madrid"
+                                onerror="this.src='https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/186.png'"></a>
+                        <a href="#" class="team-badge" title="Betis"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/185.png"
+                                alt="Betis"></a>
+                        <a href="#" class="team-badge" title="Sevilla"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/179.png"
+                                alt="Sevilla"></a>
+                        <a href="#" class="team-badge" title="Celta de Vigo"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/176.png"
+                                alt="Celta"></a>
+                        <a href="#" class="team-badge" title="Espanyol"><img src="src/177.png" alt="Espanyol"
+                                onerror="this.src='https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/177.png'"></a>
+                        <a href="#" class="team-badge" title="Rayo Vallecano"><img src="src/184.png" alt="Rayo"
+                                onerror="this.src='https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/184.png'"></a>
+                        <a href="#" class="team-badge" title="Valencia"><img src="src/191.png" alt="Valencia"
+                                onerror="this.src='https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/191.png'"></a>
+                        <a href="#" class="team-badge" title="Getafe"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/1450.png"
+                                alt="Getafe"></a>
+                        <a href="#" class="team-badge" title="Osasuna"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/450.png"
+                                alt="Osasuna"></a>
+                        <a href="#" class="team-badge" title="Real Sociedad"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/188.png"
+                                alt="Real Sociedad"></a>
+                        <a href="#" class="team-badge" title="Villarreal"><img
+                                src="https://objetos.estaticos-marca.com/assets/sports/logos/football/png/36x36/449.png"
+                                alt="Villarreal"></a>
+                        <!-- Extra src/ badges -->
+                        <a href="#" class="team-badge" title="Equipo 1174"><img src="src/1174.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1283"><img src="src/1283.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1284"><img src="src/1284.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1286"><img src="src/1286.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1287"><img src="src/1287.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1291"><img src="src/1291.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1292"><img src="src/1292.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1293"><img src="src/1293.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1294"><img src="src/1294.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1295"><img src="src/1295.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1296"><img src="src/1296.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1297"><img src="src/1297.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 16922"><img src="src/16922.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 1734"><img src="src/1734.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 22440"><img src="src/22440.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 22441"><img src="src/22441.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 2671"><img src="src/2671.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 3335"><img src="src/3335.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 3579"><img src="src/3579.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 4047"><img src="src/4047.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 4690"><img src="src/4690.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 5520"><img src="src/5520.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 741"><img src="src/741.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 7581"><img src="src/7581.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 7585"><img src="src/7585.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 853"><img src="src/853.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 9491"><img src="src/9491.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 954"><img src="src/954.png" alt="Equipo"></a>
+                        <a href="#" class="team-badge" title="Equipo 10991"><img src="src/10991.png" alt="Equipo"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="compact-nav" id="compactNav">
+                <div class="container-xl d-flex align-items-center gap-3 w-100">
+                    <div class="compact-logo">M</div>
+                    <span class="compact-title">Portada</span>
+                    <a href="https://www.marca.com/club-marca.html" class="club-marca-btn ms-auto"
+                        aria-label="Hazte socio de CLUB MARCA" style="font-size:.68rem;padding:3px 9px;">
+                        <!-- Small stacked logo (visible at small widths) -->
+                        <svg class="cm-logo-sm" role="img" aria-hidden="true" width="32" height="22"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 33 22">
+                            <g class="marca" fill="#C00C00">
+                                <path fill-rule="evenodd"
+                                    d="m4.525 20.742-1.374-3.84v3.135h.49v1.954H.577v-1.954h.49v-5.012h-.5v-1.944l2.93-.01 1.076 3.03 1.085-3.03 2.872.01v1.944h-.49v5.012h.49v1.954H5.466v-1.954h.49v-3.135l-1.431 3.84Z"
+                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd"
+                                    d="m13.524 13.072 1.143 6.965h.356v1.954h-2.834v-1.954h.365v-.734h-1.316v.734h.365v1.954H8.78v-1.954h.356l1.143-6.965h3.247Zm-1.172 5.06-.451-2.754-.442 2.753h.893Z"
+                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd"
+                                    d="M24.445 15.035v1.734h2.046v-2.744l-.951-.953h-2.988l-.95.943v7.023l.95.943h2.997l.951-.943v-2.745h-2.046v1.735h-.672v-5.012h.672l-.01.019Z"
+                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd"
+                                    d="M18.644 21.99v-3.535h-.663v1.591h.355V22h-3.063v-1.954h.49v-5.012h-.49v-1.953h4.62l.95.943v2.811l-.768.753.759.753v1.705h.49V22h-2.7l.02-.01Zm-.663-6.965v2.048h.672v-2.048h-.672Z"
+                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd"
+                                    d="m31.486 13.072 1.143 6.965h.355v1.954H30.15v-1.954h.366v-.734H29.2v.734h.365v1.954H26.74v-1.954h.355l1.143-6.965h3.247Zm-1.172 5.06-.452-2.754-.441 2.753h.893Z"
+                                    clip-rule="evenodd" />
+                            </g>
+                            <g class="club" fill="#4F4F4F">
+                                <path
+                                    d="M4.814 2.593h-1V9.24h1V6.93h3.268v3.627l-1.41 1.257H1.997l-1.41-1.257v-9.3L1.996 0h4.677l1.41 1.256v3.647H4.813v-2.31Z" />
+                                <path d="M12.125 0v9.219H15.7v2.594H8.857V0h3.268Z" />
+                                <path
+                                    d="M16.456 0h3.248v9.24h1V0h3.269v10.556l-1.41 1.257h-4.677l-1.409-1.257V0h-.02Z" />
+                                <path
+                                    d="M24.708 9.219h.735V2.593h-.735V.02h6.883L33 1.276v3.728l-1.145.993 1.124.973v3.627l-1.348 1.236h-6.945V9.239l.02-.02Zm4.024-3.931h1V2.573h-1v2.715Zm0 3.93h1V6.505h-1v2.715Z" />
+                            </g>
+                        </svg>
+                        <!-- Full horizontal logo (desktop) -->
+                        <svg class="cm-logo-lg" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" width="98" height="14" viewBox="0 0 117 18">
+                            <style>
+                                :root {
+                                    --cm-st01: #C00C00;
+                                    --cm-st02: #4F4F4F
+                                }
+                            </style>
+                            <g class="marca">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M60.1275 15.2257L57.4585 7.62222V13.8291H58.4206V17.7084H52.3689V13.8291H53.362V3.89808H52.3689V0.0498047H58.1103L60.2206 6.03946L62.362 0.0498047H68.0103V3.89808H67.0482V13.8291H68.0103V17.7084H61.9896V13.8291H62.9517V7.62222L60.1275 15.2257Z"
+                                    fill="var(--cm-st01)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M77.8172 0.0498047L80.0517 13.8291H80.7655V17.7084H75.2103V13.8291H75.9241V12.3705H73.3482V13.8291H74.062V17.7084H68.5068V13.8291H69.2206L71.4551 0.0498047H77.8172ZM75.5206 10.0429L74.6206 4.58084L73.7517 10.0429H75.5206Z"
+                                    fill="var(--cm-st01)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M99.262 3.92912V7.37394H103.265V1.94291L101.403 0.0498047H95.5379L93.6758 1.91187V15.8153L95.5379 17.6774H101.403L103.265 15.8153V10.3843H99.231V13.8291H97.8965V3.89808H99.231L99.262 3.92912Z"
+                                    fill="var(--cm-st01)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M87.8723 17.7084V10.6946H86.5689V13.8291H87.2827V17.7084H81.262V13.8291H82.224V3.89808H81.262V0.0498047H90.3551L92.2171 1.91187V7.46705L90.7275 8.9567L92.2171 10.4464V13.8291H93.1792V17.6774H87.9033L87.8723 17.7084ZM86.5689 3.89808V7.9636H87.8723V3.89808H86.5689Z"
+                                    fill="var(--cm-st01)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M113.103 0.0498047L115.338 13.8291H116.052V17.7084H110.496V13.8291H111.21V12.3705H108.634V13.8291H109.348V17.7084H103.793V13.8291H104.507L106.741 0.0498047H113.103ZM110.776 10.0429L109.876 4.58084L109.007 10.0429H110.776Z"
+                                    fill="var(--cm-st01)" />
+                            </g>
+                            <g class="club">
+                                <path
+                                    d="M7.46505 3.94874H5.95331V13.9341H7.46505V10.4731H12.3185V15.9233L10.21 17.8328H3.20832L1.09985 15.9233V1.95962L3.20832 0.0898438H10.21L12.3185 1.95962V7.4496H7.46505V3.98852V3.94874Z"
+                                    fill="var(--cm-st02)" />
+                                <path d="M18.4052 0.0498047V13.8941H23.7361V17.7928H13.5518V0.0498047H18.4052Z"
+                                    fill="var(--cm-st02)" />
+                                <path
+                                    d="M24.8501 0.0498047H29.7036V13.9339H31.2153V0.0498047H36.0687V15.923L33.9603 17.7928H26.9586L24.8501 15.923V0.0498047Z"
+                                    fill="var(--cm-st02)" />
+                                <path
+                                    d="M37.1428 13.8941H38.2567V3.9087H37.1428V0.0498047H47.4067L49.5152 1.91958V7.52891L47.8045 9.04064L49.4754 10.5126V15.9628L47.4863 17.8326H37.1428V13.9339V13.8941ZM43.15 7.96651H44.6617V3.9087H43.15V7.96651ZM43.15 13.8941H44.6617V9.83629H43.15V13.8941Z"
+                                    fill="var(--cm-st02)" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
     <main>
+        <div class="container mt-3 mb-4" style="max-width: 980px;">
 
+            <div class="text-center text-secondary mb-1" style="font-size: 0.65rem; letter-spacing: 0.5px;">
+                PUBLICIDAD
+            </div>
+
+            <div class="rounded-4 p-3 shadow-sm" style="background-color: #0b1a2a;">
+                <div class="row align-items-center">
+
+
+                    <div class="col-12 col-md-3 mb-3 mb-md-0 d-flex flex-column gap-3">
+
+                        <div class="d-flex align-items-center gap-2">
+
+                            <i class="bi bi-person-fill text-white-50 fs-2"></i>
+                            <div>
+                                <div class="fw-bold text-white small">Atlante</div>
+
+                                <div class="d-flex gap-1 mt-1">
+                                    <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
+                                    <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
+                                    <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
+                                    <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
+                                    <span class="bg-secondary rounded-circle" style="width: 7px; height: 7px;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+
+                            <i class="bi bi-person-fill text-white fs-2"></i>
+                            <div>
+                                <div class="fw-bold text-white small">Monterrey</div>
+
+                                <div class="d-flex gap-1 mt-1">
+                                    <span class="bg-success rounded-circle" style="width: 7px; height: 7px;"></span>
+                                    <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
+                                    <span class="bg-success rounded-circle" style="width: 7px; height: 7px;"></span>
+                                    <span class="bg-danger rounded-circle" style="width: 7px; height: 7px;"></span>
+                                    <span class="bg-secondary rounded-circle" style="width: 7px; height: 7px;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3 mb-md-0">
+                        <div class="text-center text-white mb-2">
+                            <h6 class="fw-bold mb-0">Liga MX, Apertura</h6>
+                            <small class="text-white-50" style="font-size: 0.75rem;">19:00 25-09-2026</small>
+                        </div>
+
+                        <div class="d-flex gap-2 mb-2">
+                            <div
+                                class="bg-white text-dark rounded-2 py-2 px-3 flex-fill d-flex justify-content-between align-items-center cursor-pointer">
+                                <span class="text-muted fw-medium small">1</span>
+                                <span class="fw-bold">3.60</span>
+                            </div>
+                            <div
+                                class="bg-white text-dark rounded-2 py-2 px-3 flex-fill d-flex justify-content-between align-items-center cursor-pointer">
+                                <span class="text-muted fw-medium small">X</span>
+                                <span class="fw-bold">3.60</span>
+                            </div>
+                            <div
+                                class="bg-white text-dark rounded-2 py-2 px-3 flex-fill d-flex justify-content-between align-items-center cursor-pointer">
+                                <span class="text-muted fw-medium small">2</span>
+                                <span class="fw-bold">1.91</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <div class="bg-white text-dark rounded-2 py-1 px-2 flex-fill text-center">
+                                <div class="text-muted" style="font-size: 0.65rem;">Stake</div>
+                                <div class="fw-bold" style="font-size: 0.95rem;">$100.00 MXN</div>
+                            </div>
+                            <div class="text-dark rounded-2 py-1 px-2 flex-fill text-center"
+                                style="background-color: #ffb700;">
+                                <div style="font-size: 0.65rem;">Possible Payout</div>
+                                <div class="fw-bold" style="font-size: 0.95rem;">$360.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-3 text-center">
+                        <div class="text-white mb-2">
+
+                            <span class="fst-italic fw-bolder fs-2">Stake<span class="fs-6">.mx</span></span>
+                        </div>
+                        <button class="btn w-100 fw-bold rounded-2 py-2 mb-2"
+                            style="background-color: #00e701; color: #000; font-size: 0.9rem;">
+                            REGÍSTRATE
+                        </button>
+                        <p class="text-white-50 mx-auto"
+                            style="font-size: 0.35rem; line-height: 1.2; text-align: justify;">
+                            WWW.STAKE.MX ES OPERADA EN MÉXICO POR PRODUCCIONES MÓVILES S.A. DE C.V., TITULAR DEL PERMISO
+                            SEGOB DGAJS/SCEVF/P-06/2005-TER, EN UNIÓN DE UNOCAPITAL LA PAZ OPERADORA, S.A. DE C.V., DE
+                            CONFORMIDAD CON LOS OFICIOS DGJS/3983/2021, DGJS/DRCA/2772/2021 Y DGJS/DRCA/2852/2021.
+                            JUEGUE
+                            RESPONSABLEMENTE. EL PRINCIPAL PROPÓSITO ES LA RECREACIÓN, DIVERSIÓN Y ESPARCIMIENTO. 18+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container my-3">
+            <div class="bg-white border rounded shadow-sm overflow-hidden mx-auto" style="max-width: 980px;">
+                <div class="row g-0 align-items-stretch flex-column flex-md-row">
+                    <div class="col-12 col-md-auto bg-light border-end border-bottom border-md-bottom-0 p-2 p-md-3 d-flex flex-row flex-md-column justify-content-between justify-content-md-center align-items-center align-items-md-start"
+                        style="min-width: 130px;">
+                        <label class="fw-bold mb-0 mb-md-1 text-dark" style="font-size: 0.85rem;">Resultados:</label>
+                        <select id="filtroLiga" class="form-select form-select-sm border-secondary-subtle"
+                            style="width: auto;">
+                            <option value="todos" selected>Todos</option>
+                            <option value="laliga">LALIGA EA SPORTS</option>
+                            <option value="MX">La Liga MX</option>
+                        </select>
+                    </div>
+                    <div class="col position-relative overflow-hidden p-2 pe-4">
+                        <div id="carouselPartidos" class="carousel slide" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-center mb-2 px-1">
+                                            <div class="fw-bold text-dark small d-flex align-items-center"
+                                                style="font-size: 0.8rem;">
+                                                <i class="bi bi-dribbble me-1"></i> LALIGA EA SPORTS
+                                            </div>
+                                            <a href="#" class="text-primary text-decoration-none small fw-semibold"
+                                                style="font-size: 0.8rem;">Ver todo &gt;</a>
+                                        </div>
+                                        <div id="partidosScroll"
+                                            class="partidos-scroll d-flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+
+                                            <!-- Tarjeta 1: Liga MX -->
+                                            <div class="card match-card border rounded-3 p-2 shadow-sm"
+                                                data-league="MX">
+                                                <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                                    11:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center my-1">
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/1297.png" alt="Pumas" class="team-logo">
+                                                            <span class="text-primary fw-medium">Pumas</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/1292.png" alt="América" class="team-logo">
+                                                            <span class="text-primary fw-medium">América</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="score-box d-flex flex-column text-end fw-bold ps-2"
+                                                        style="font-size: 0.75rem;">
+                                                        <span>-</span>
+                                                        <span>-</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Division: LALIGA -->
+                                            <div class="card match-card border rounded-3 p-2 shadow-sm"
+                                                data-league="laliga">
+                                                <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                                    13:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center my-1">
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/186.png" alt="Real Madrid" class="team-logo">
+                                                            <span class="text-primary fw-medium">R. Madrid</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/853.png" alt="Barcelona" class="team-logo">
+                                                            <span class="text-primary fw-medium">Cruz Azul</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="score-box d-flex flex-column text-end fw-bold ps-2"
+                                                        style="font-size: 0.75rem;">
+                                                        <span>-</span>
+                                                        <span>-</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- División: Liga MX -->
+                                            <div class="card match-card border rounded-3 p-2 shadow-sm"
+                                                data-league="MX">
+                                                <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                                    15:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center my-1">
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/1294.png" alt="Pumas" class="team-logo">
+                                                            <span class="text-primary fw-medium">Tigres</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/1291.png" alt="América" class="team-logo">
+                                                            <span class="text-primary fw-medium">Lucenec</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="score-box d-flex flex-column text-end fw-bold ps-2"
+                                                        style="font-size: 0.75rem;">
+                                                        <span>-</span>
+                                                        <span>-</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- División LALIGA -->
+                                            <div class="card match-card border rounded-3 p-2 shadow-sm"
+                                                data-league="laliga">
+                                                <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                                    17:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center my-1">
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/1283.png" alt="Atlético" class="team-logo">
+                                                            <span class="text-primary fw-medium">Chivas</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/1284.png" alt="Sevilla" class="team-logo">
+                                                            <span class="text-primary fw-medium">Atlas FC</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="score-box d-flex flex-column text-end fw-bold ps-2"
+                                                        style="font-size: 0.75rem;">
+                                                        <span>-</span>
+                                                        <span>-</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Tarjeta 5: Liga MX -->
+                                            <div class="card match-card border rounded-3 p-2 shadow-sm"
+                                                data-league="MX">
+                                                <div class="text-center fw-bold mb-1" style="font-size: 0.75rem;">
+                                                    19:00 <span class="text-muted fw-normal ms-1">DAZN</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center my-1">
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/1297.png" alt="Pumas" class="team-logo">
+                                                            <span class="text-primary fw-medium">Pumas</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <img src="src/186.png" alt="América" class="team-logo">
+                                                            <span class="text-primary fw-medium">R. Madrid</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="score-box d-flex flex-column text-end fw-bold ps-2"
+                                                        style="font-size: 0.75rem;">
+                                                        <span>-</span>
+                                                        <span>-</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex gap-2 align-items-center p-3">
+                                        <p class="text-muted mb-0 small">Cargando más partidos...</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="btn-scroll-prev carousel-control-custom carousel-control-prev-custom position-absolute start-0 border-0 text-white d-flex align-items-center justify-content-center p-0 d-none"
+                            type="button" data-dir="-1"
+                            style="top: 50%; transform: translateY(-50%); height: 35%; width: 26px; background-color: rgba(180, 180, 180, 0.85); border-radius: 0 3px 3px 0; z-index: 5;">
+                            <i class="bi bi-chevron-left fs-6"></i>
+                        </button>
+
+                        <button
+                            class="btn-scroll-next carousel-control-custom carousel-control-next-custom position-absolute end-0 border-0 text-white d-flex align-items-center justify-content-center p-0"
+                            type="button" data-dir="1"
+                            style="top: 50%; transform: translateY(-50%); height: 35%; width: 26px; background-color: rgba(180, 180, 180, 0.85); border-radius: 3px 0 0 3px; z-index: 5;">
+                            <i class="bi bi-chevron-right fs-6"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer bg-dark text-white py-3">
@@ -788,44 +1384,96 @@ document.addEventListener('DOMContentLoaded', () => {
                 <hr>
             </div>
             <div class="container">
-                    <div class="row">
+                <div class="row">
                     <div class="col-3">
                         <strong class="d-block">Marca</strong>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">App Marca</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Apuestas Deportivas</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Clasificación LaLiga</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Calendario LaLiga</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Hemeroteca Marca</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Marca eSports</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Marca Madrid</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Marca en Orbyt</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Zona Marca</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">App
+                                Marca</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Apuestas
+                                Deportivas</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Clasificación
+                                LaLiga</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Calendario
+                                LaLiga</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Hemeroteca
+                                Marca</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Marca
+                                eSports</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Marca
+                                Madrid</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Marca
+                                en Orbyt</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Zona
+                                Marca</a></p>
                     </div>
                     <div class="col-3">
                         <strong class="d-block">Ocio y Moda</strong>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Tiramillas</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Moda-Telva</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">BUHO Magazine</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Traductor</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Programación TV</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Marca Entradas</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Mi bebé y yo</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Tiramillas</a>
+                        </p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Moda-Telva</a>
+                        </p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">BUHO
+                                Magazine</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Traductor</a>
+                        </p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Programación
+                                TV</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Marca
+                                Entradas</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Mi
+                                bebé y yo</a></p>
                     </div>
                     <div class="col-3">
                         <strong class="d-block">Unidad Editorial</strong>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">El mundo</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Expansión</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">CuídatePlus</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Diario Médico</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Correo Farmacéutico</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Suscripción Marca</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Suscripción El Mundo</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">El
+                                mundo</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Expansión</a>
+                        </p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">CuídatePlus</a>
+                        </p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Diario
+                                Médico</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Correo
+                                Farmacéutico</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Suscripción
+                                Marca</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Suscripción
+                                El Mundo</a></p>
                     </div>
                     <div class="col-3">
                         <strong class="d-block">Formación y Empleo</strong>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Escuela Unidad Editorial</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Unidad Editorial</a></p>
-                        <p><a href="#" class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Expansión y Empleo</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Escuela
+                                Unidad Editorial</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Unidad
+                                Editorial</a></p>
+                        <p><a href="#"
+                                class="px-1 link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Expansión
+                                y Empleo</a></p>
                     </div>
                 </div>
             </div>
@@ -833,7 +1481,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="row bg-light">
             <p> </p>
             <div class="text-center col-12">
-                <strong>© Agosto 2018 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.</strong>
+                <strong>© Agosto 2018 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos
+                    reservados.</strong>
             </div>
             <div class="col-12 text-center text-black py-1">
                 <small>
@@ -856,8 +1505,54 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="#" class="text-dark me-2"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="text-dark me-2"><i class="bi bi-google"></i></a>
                 <a href="#" class="text-dark"><i class="bi bi-rss"></i></a>
-            </div>
+        </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollContainer = document.getElementById('partidosScroll');
+            const btnNext = document.querySelector('.btn-scroll-next');
+            const btnPrev = document.querySelector('.btn-scroll-prev');
+            const filterSelect = document.getElementById('filtroLiga');
+
+            const scrollStep = 220;
+
+            btnNext?.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: scrollStep, behavior: 'smooth' });
+            });
+
+            btnPrev?.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+            });
+
+            scrollContainer?.addEventListener('scroll', () => {
+                if (scrollContainer.scrollLeft > 10) {
+                    btnPrev.classList.remove('d-none');
+                } else {
+                    btnPrev.classList.add('d-none');
+                }
+            });
+            filterSelect?.addEventListener('change', (e) => {
+                const selectedVal = e.target.value;
+                const cards = scrollContainer.querySelectorAll('.match-card');
+
+                cards.forEach(card => {
+                    const cardLeague = card.getAttribute('data-league');
+                    if (selectedVal === 'todos' || cardLeague === selectedVal) {
+                        card.classList.remove('d-none');
+                    } else {
+                        card.classList.add('d-none');
+                    }
+                });
+
+                scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/nav.js"></script>
 </body>
+
 </html>

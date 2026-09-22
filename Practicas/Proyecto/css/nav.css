@@ -1,0 +1,596 @@
+/* ============================================================
+   nav.css  -  MARCA-style Header & Navigation
+   Bootstrap 5 handles: grid, utilities, resets
+   This file handles: all custom component styles
+   ============================================================ */
+
+/* ── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --marca-red:       #cc0000;
+  --marca-red-dark:  #a80000;
+  --marca-dark:      #111111;
+  --marca-border:    #e0e0e0;
+  --marca-muted:     #666666;
+  --marca-light:     #f4f4f4;
+  --marca-menu-bg:   #1a1a1a;
+
+  --header-full:     173px;   /* ticker+topbar+rednav+teams */
+  --header-compact:  42px;
+  --speed:           0.26s;
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #fff;
+  color: var(--marca-dark);
+  padding-top: var(--header-full);
+}
+body.scrolled {
+  padding-top: var(--header-compact);
+}
+
+/* ── Site Header wrapper ────────────────────────────────────── */
+#site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1050;
+  background: #fff;
+}
+
+/* ============================================================
+   TICKER BAR
+   ============================================================ */
+.ticker-bar {
+  height: 28px;
+  border-bottom: 1px solid var(--marca-border);
+  overflow: hidden;
+  transition: height var(--speed) ease, opacity var(--speed) ease;
+}
+.ticker-label {
+  background: var(--marca-red);
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  padding: 0 10px;
+  height: 100%;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.ticker-overflow { overflow: hidden; flex: 1; }
+.ticker-track {
+  display: flex;
+  white-space: nowrap;
+  animation: tickerScroll 50s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-item {
+  padding: 0 14px 0 0;
+  font-size: .72rem;
+  color: var(--marca-dark);
+  text-decoration: none;
+  cursor: pointer;
+}
+.ticker-item:hover { color: var(--marca-red); }
+.ticker-item::after { content: ' |'; color: #bbb; margin-left: 12px; }
+.ticker-item:last-child::after { display: none; }
+
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   TOP BAR (logo + highlights + tools)
+   ============================================================ */
+.top-bar {
+  height: 60px;
+  border-bottom: 1px solid var(--marca-border);
+  /* NO overflow:hidden here — it would clip Bootstrap's dropdown-menu */
+  overflow: visible;
+  position: relative;
+  z-index: 300; /* above main-nav so dropdown overlaps it */
+  transition: height var(--speed) ease, opacity var(--speed) ease;
+}
+.brand-logo svg { height: 34px; width: auto; display: block; }
+.brand-logo { text-decoration: none; }
+
+/* Highlights list — estructura original Marca.com */
+.main-site-highlights {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.main-site-highlights li { display: flex; align-items: center; }
+.main-site-highlights li + li::before {
+  content: '';
+  width: 1px;
+  height: 28px;
+  background: var(--marca-border);
+  margin: 0 14px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Portada */
+.highlight-cover a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--marca-dark);
+  transition: opacity .2s;
+}
+.highlight-cover a:hover { opacity: .72; }
+.highlight-cover img {
+  width: 34px; height: 44px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.15);
+}
+.highlight-cover strong {
+  display: block;
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--marca-dark);
+}
+.highlight-cover p {
+  margin: 0;
+  font-size: .67rem;
+  color: var(--marca-muted);
+  line-height: 1.2;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Radio MARCA */
+.main-highlight-radio a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: var(--marca-dark);
+  transition: opacity .2s;
+}
+.main-highlight-radio a:hover { opacity: .72; }
+.radio-heading {
+  font-size: .76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* CuídatePlus */
+.patrocinio a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: var(--marca-dark);
+  transition: opacity .2s;
+}
+.patrocinio a:hover { opacity: .72; }
+.patrocinio strong {
+  font-size: .76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.patrocinio svg { flex-shrink: 0; }
+
+
+/* Edition selector (Bootstrap dropdown-toggle) */
+.edition-btn {
+  border: 1px solid var(--marca-border);
+  border-radius: 4px;
+  padding: 4px 9px;
+  font-size: .73rem;
+  font-weight: 500;
+  background: #fff;
+  color: var(--marca-dark);
+  cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+  transition: border-color .2s;
+  /* Bootstrap dropdown-toggle reset */
+  box-shadow: none;
+  outline: none;
+  white-space: nowrap;
+}
+.edition-btn:hover,
+.edition-btn:focus { border-color: #999; box-shadow: none; color: var(--marca-dark); }
+.edition-btn::after { display: none; } /* hide Bootstrap caret, we use chevron icon */
+
+/* Flag icon sizing within buttons and dropdowns */
+.fi {
+  width: 18px;
+  height: 13px;
+  background-size: cover;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Edition dropdown items */
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+  background-color: var(--marca-red);
+  color: #fff;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--marca-gray-light, #f4f4f4);
+  color: var(--marca-red);
+}
+
+/* Inline SVG highlights (Radio MARCA, CuídatePlus) */
+.hl-link > svg {
+  flex-shrink: 0;
+}
+
+/* ClubMarca SVG button */
+.club-marca-btn {
+  border: 1.5px solid #222;
+  border-radius: 3px;
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.club-marca-btn:hover  { border-color: var(--marca-red); background: #fafafa; }
+.cm-logo-sm { display: block; }
+.cm-logo-lg { display: none; }
+@media (min-width: 900px) {
+  .cm-logo-sm { display: none; }
+  .cm-logo-lg { display: block; }
+}
+
+/* Login link */
+.login-btn {
+  font-size: .76rem; font-weight: 500;
+  color: var(--marca-dark);
+  text-decoration: none;
+  background: none; border: none;
+  display: flex; align-items: center; gap: 6px;
+  cursor: pointer;
+  padding: 0;
+  transition: color .2s;
+  white-space: nowrap;
+}
+.login-btn:hover  { color: var(--marca-red); }
+.login-btn:hover svg path { stroke: var(--marca-red); }
+.login-btn:hover svg circle { stroke: var(--marca-red); }
+.login-btn .icon-login { display: flex; align-items: center; }
+.login-btn span { font-size: .78rem; }
+
+/* ============================================================
+   MAIN NAV BAR (red)
+   ============================================================ */
+.main-nav {
+  background: var(--marca-red);
+  position: relative;
+  z-index: 200;
+}
+
+/* Nav list */
+.nav-list {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  margin: 0; padding: 0;
+  width: 100%;
+}
+
+/* Nav item */
+.ni { list-style: none; position: relative; }
+.ni.mega-parent { position: static; }
+.ni.ms-auto-item { margin-left: auto; }
+
+/* Nav link */
+.nl {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  transition: background .18s, border-color .18s;
+  line-height: 1;
+}
+.nl:hover, .nl:focus { color: #fff; text-decoration: none; }
+.nl .ch {
+  font-size: .52rem;
+  opacity: .8;
+  transition: transform .2s;
+  display: inline-block;
+}
+
+/* Active/hover state */
+.ni:hover > .nl,
+.ni.open > .nl {
+  background: rgba(0,0,0,.22);
+  border-bottom-color: #fff;
+  color: #fff;
+}
+.ni:hover > .nl .ch,
+.ni.open > .nl .ch { transform: rotate(180deg); }
+
+/* Accent items (no dropdown) */
+.nl.accent { background: rgba(0,0,0,.15); }
+.nl.accent:hover { background: rgba(0,0,0,.28); }
+
+/* ============================================================
+   DROPDOWN PANEL (base — shared by mega & simple)
+   ============================================================ */
+.dropdown-panel {
+  position: absolute;
+  left: 0; right: 0; top: 100%;
+  background: var(--marca-menu-bg);
+  border-top: 3px solid var(--marca-red);
+  box-shadow: 0 8px 32px rgba(0,0,0,.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition:
+    opacity .2s ease,
+    transform .2s ease,
+    visibility 0s linear .2s;
+  z-index: 999;
+}
+.dropdown-panel::before,
+.simple-panel::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: transparent;
+}
+.ni:hover > .dropdown-panel,
+.ni.open > .dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    opacity .2s ease,
+    transform .2s ease,
+    visibility 0s;
+}
+
+/* ============================================================
+   MEGA MENU
+   ============================================================ */
+.mega-panel { padding: 28px 0 32px; }
+
+.mega-grid {
+  display: grid;
+  gap: 0;
+}
+.mega-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.mega-grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+.mega-grid-2 { grid-template-columns: 2fr 1fr 1fr; }
+.mega-grid-1-2-1 { grid-template-columns: 1fr 2fr 1fr; }
+
+/* Mega column */
+.m-col {
+  padding: 0 24px;
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+.m-col:first-child { padding-left: 0; }
+.m-col:last-child  { border-right: none; }
+
+/* Column title */
+.m-col-title {
+  font-size: .68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .9px;
+  color: var(--marca-muted);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.m-col-title a { text-decoration: none; color: inherit; }
+.m-col-title a:hover { color: #fff; }
+
+/* Section within a column */
+.m-sec { margin-bottom: 10px; }
+
+/* Section title (bold league/competition name) */
+.m-sec-title {
+  font-size: .8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+.m-sec-title:hover { color: var(--marca-red); }
+.m-sec-title.light {
+  font-weight: 400;
+  color: rgba(255,255,255,.65);
+  font-size: .78rem;
+}
+.m-sec-title.light:hover { color: #fff; }
+
+/* Sub-links row */
+.m-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  margin-top: 1px;
+}
+.m-links a {
+  font-size: .71rem;
+  color: var(--marca-red);
+  text-decoration: none;
+  transition: color .15s;
+}
+.m-links a:hover { color: #ff4444; }
+.m-sep { color: rgba(255,255,255,.25); margin: 0 4px; font-size: .68rem; }
+
+/* GP list (Formula 1 grands prix) */
+.gp-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px 0;
+  margin-top: 4px;
+}
+.gp-list a {
+  font-size: .7rem;
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
+.gp-list a:hover { color: #fff; }
+.gp-list .gs { color: rgba(255,255,255,.2); margin: 0 3px; font-size: .65rem; }
+
+/* América-style list */
+.m-list { list-style: none; padding: 0; margin: 0; }
+.m-list li { margin-bottom: 6px; line-height: 1.35; }
+.ml-main { font-size: .78rem; font-weight: 700; color: #fff; text-decoration: none; }
+.ml-main:hover { color: var(--marca-red); }
+.ml-sub  { font-size: .68rem; color: var(--marca-red); text-decoration: none; }
+.ml-sub:hover { color: #ff4444; }
+
+/* Simple dropdown (small, non-mega) */
+.simple-panel {
+  position: absolute;
+  top: 100%; left: 0;
+  min-width: 210px;
+  background: var(--marca-menu-bg);
+  border-top: 3px solid var(--marca-red);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: opacity .18s, transform .18s, visibility 0s linear .18s;
+  z-index: 999;
+  border-radius: 0 0 4px 4px;
+}
+.ni:hover > .simple-panel,
+.ni.open > .simple-panel {
+  opacity: 1; visibility: visible; transform: translateY(0);
+  transition: opacity .18s, transform .18s, visibility 0s;
+}
+.simple-panel a {
+  display: block;
+  padding: 9px 16px;
+  font-size: .8rem;
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: background .15s, color .15s;
+}
+.simple-panel a:last-child { border-bottom: none; }
+.simple-panel a:hover { background: rgba(255,255,255,.06); color: #fff; }
+.ni.ms-auto-item .simple-panel { left: auto; right: 0; }
+
+/* ============================================================
+   TEAMS BAR
+   ============================================================ */
+.teams-bar {
+  height: 44px;
+  border-bottom: 1px solid var(--marca-border);
+  overflow: hidden;
+  background: #fff;
+  transition: height var(--speed) ease, opacity var(--speed) ease;
+}
+.teams-scroll {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  height: 100%;
+  padding: 6px 0;
+}
+.teams-scroll::-webkit-scrollbar { display: none; }
+.teams-scroll.dragging { cursor: grabbing; user-select: none; }
+
+.team-badge {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  display: block;
+  transition: transform .2s cubic-bezier(.34,1.56,.64,1);
+}
+.team-badge:hover { transform: scale(1.28); }
+.team-badge img {
+  width: 100%; height: 100%;
+  object-fit: contain; display: block;
+}
+
+/* ============================================================
+   COMPACT NAV (shown when scrolled)
+   ============================================================ */
+.compact-nav {
+  display: none;
+  height: var(--header-compact);
+  align-items: center;
+  border-bottom: 2px solid var(--marca-border);
+  background: #fff;
+}
+.compact-logo {
+  background: var(--marca-red);
+  color: #fff;
+  font-weight: 900;
+  font-size: .88rem;
+  width: 26px; height: 26px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: -.5px;
+}
+.compact-title {
+  font-size: .77rem;
+  color: var(--marca-muted);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================
+   SCROLLED STATE
+   ============================================================ */
+body.scrolled .ticker-bar { height: 0; opacity: 0; overflow: hidden; }
+body.scrolled .top-bar    { height: 0; opacity: 0; overflow: hidden; pointer-events: none; }
+body.scrolled .main-nav   { display: none; }
+body.scrolled .teams-bar  { height: 0; opacity: 0; overflow: hidden; }
+body.scrolled .compact-nav { display: flex; }
+
+/* ============================================================
+   DEMO CONTENT
+   ============================================================ */
+.demo-content { padding: 48px 0; }
+.demo-content h1 { font-size: 2rem; font-weight: 800; margin-bottom: .75rem; }
+.demo-content p  { color: var(--marca-muted); margin-bottom: 1.5rem; }
+.demo-filler {
+  height: 2400px;
+  background: linear-gradient(to bottom, #f7f7f7, #eee);
+  border-radius: 8px;
+  padding: 24px;
+  color: #ccc;
+  font-size: .85rem;
+}
