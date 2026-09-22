@@ -7,12 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
       .es-noticia {
           background-color: #fff;
           padding: 0 10px;
-          height: 34px;
+        /*  height: 34px;*/
           font-family: Roboto, Arial, sans-serif;
           font-size: 16px;
           white-space: nowrap; 
@@ -185,7 +186,6 @@
       color: #fff;
     }
  
-    /* ===== Franja roja de secciones ===== */
     .marca-redbar {
       background-color: #cf0018;
     }
@@ -259,52 +259,180 @@
                 <li><a href="#" style="font-size: 10px;">Precio luz hoy</a></li>
             </ul>
         </div>
-
-        <div class="marca-topbar bg-white">
-            <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap gap-2 py-2 px-3">
-
-                <div class="d-flex align-items-center gap-2">
-                    <a href="#" class="marca-logo">MARCA<span class="logo-dot"></span></a>
-                    <div class="country-select border d-flex align-items-center gap-1">
-                        <span>🇲🇽</span>
-                        <span class="fw-medium">México</span>
-                        <i class="bi bi-chevron-down small"></i>
+        
+<div class="bg-white py-2 px-3 border-bottom">
+    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="d-none d-lg-flex align-items-center gap-3">
+            <a href="#" class="text-dark text-decoration-none fw-bold small d-flex align-items-center gap-1">
+                <i class="bi bi-vinyl-fill text-primary fs-5"></i> Radio MARCA
+            </a>
+            <a href="#" class="text-dark text-decoration-none fw-bold small d-flex align-items-center gap-1">
+                <i class="bi bi-heart-pulse-fill text-info fs-5"></i> CuídatePlus
+            </a>
+            <a href="#" class="text-dark text-decoration-none fw-bold small d-flex align-items-center gap-1">
+                <i class="bi bi-hash text-danger fs-4"></i> Lo + trending
+            </a>
+        </div>
+        <div class="mx-lg-auto text-center">
+            <a href="#" class="marca-logo text-decoration-none" style="font-size: 2.2rem;">MARCA<span class="logo-dot"></span></a>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <div class="country-select border d-flex align-items-center gap-1 rounded-pill px-2 py-1">
+                <span>🇲🇽</span>
+                <span class="fw-medium text-dark" style="font-size: 0.85rem;">México</span>
+                <i class="bi bi-chevron-down small text-dark"></i>
+            </div>
+            <a href="#" class="marca-login-btn text-decoration-none d-flex align-items-center gap-1 rounded-pill border px-3 py-1 text-dark fw-medium" style="font-size: 0.85rem;">
+                <i class="bi bi-person"></i> Iniciar sesión
+            </a>
+        </div>
+    </div>
+</div>
+<nav class="marca-redbar position-relative py-1" style="z-index: 1050;">
+    <div class="container-fluid">
+        <ul class="nav justify-content-center align-items-center mb-0 gap-1 gap-md-3 flex-wrap">
+            <li class="nav-item dropdown position-static">
+                <a class="nav-link text-white fw-bold px-2 d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Fútbol <i class="bi bi-chevron-down" style="font-size: 0.6rem;"></i>
+                </a>
+                <div class="dropdown-menu w-100 bg-dark rounded-0 border-0 mt-0 p-4 shadow-lg">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h6 class="text-secondary fw-bold mb-3">México</h6>
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Liga MX</a></li>
+                                    <li><a href="#" class="text-muted text-decoration-none" style="font-size: 0.8rem;">Calendario Apertura / Posiciones</a></li>
+                                    <li class="mt-2"><a href="#" class="text-white text-decoration-none fw-bold small">Liga MX Femenil</a></li>
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Liga de Expansión MX</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-secondary fw-bold mb-3">América</h6>
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Copa América</a></li>
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">MLS</a></li>
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Concachampions</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-secondary fw-bold mb-3">Europa</h6>
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">LaLiga EA Sports</a></li>
+                                    <li><a href="#" class="text-muted text-decoration-none" style="font-size: 0.8rem;">Barcelona / Real Madrid</a></li>
+                                    <li class="mt-2"><a href="#" class="text-white text-decoration-none fw-bold small">Premier League</a></li>
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Champions League</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
- 
-                <ul class="marca-mainnav d-none d-lg-flex align-items-center gap-4">
-                    <li><a href="#">Fútbol <i class="bi bi-chevron-down small"></i></a></li>
-                    <li><a href="#">Motor <i class="bi bi-chevron-down small"></i></a></li>
-                    <li><a href="#">Boxeo</a></li>
-                    <li><a href="#">NFL <i class="bi bi-chevron-down small"></i></a></li>
-                    <li><a href="#">Otros deportes <i class="bi bi-chevron-down small"></i></a></li>
-                    <li><a href="#">Más +</a></li>
-                </ul>
- 
-                <div class="d-flex align-items-center gap-3">
-                    <i class="bi bi-search fs-5"></i>
-                    <a href="#" class="marca-login-btn d-flex align-items-center gap-1">
-                        <i class="bi bi-person"></i> Iniciar sesión
-                    </a>
+            </li>
+            <li class="nav-item dropdown position-static">
+                <a class="nav-link text-white fw-bold px-2 d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Motor <i class="bi bi-chevron-down" style="font-size: 0.6rem;"></i>
+                </a>
+                <div class="dropdown-menu w-100 bg-dark rounded-0 border-0 mt-0 p-4 shadow-lg">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h6 class="text-secondary fw-bold mb-3">F1</h6>
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Calendario / Clasificación</a></li>
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Clasificación constructores</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-secondary fw-bold mb-3">Motociclismo</h6>
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">MotoGP</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
- 
-            </div>
-        </div>
-
-        <div class="marca-redbar">
-            <div class="container-fluid d-flex align-items-center gap-3 px-3 py-2">
-                <span class="redbar-title">Actualidad</span>
-                <span class="redbar-sep">/</span>
-                <ul class="redbar-tabs d-flex flex-wrap">
-                    <li class="active"><a href="#">Noticias</a></li>
-                    <li><a href="#">Dinero</a></li>
-                    <li><a href="#">Loterías</a></li>
-                    <li><a href="#">Sociedad</a></li>
-                    <li><a href="#">Sucesos</a></li>
-                    <li><a href="#">Salud</a></li>
-                </ul>
-            </div>
-        </div>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold px-2" href="#">Boxeo</a></li>
+            <li class="nav-item dropdown position-static">
+                <a class="nav-link text-white fw-bold px-2 d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    NFL <i class="bi bi-chevron-down" style="font-size: 0.6rem;"></i>
+                </a>
+                <div class="dropdown-menu w-100 bg-dark rounded-0 border-0 mt-0 p-4 shadow-lg">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h6 class="text-secondary fw-bold mb-3">NFL</h6>
+                                <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Calendario</a></li>
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Posiciones</a></li>
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Resultados</a></li>
+                                    <li><a href="#" class="text-white text-decoration-none fw-bold small">Superbowl</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown position-static">
+                <a class="nav-link text-white fw-bold px-2 d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Otros deportes <i class="bi bi-chevron-down" style="font-size: 0.6rem;"></i>
+                </a>
+                <div class="dropdown-menu w-100 bg-dark rounded-0 border-0 mt-0 p-4 shadow-lg">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h6 class="text-white fw-bold mb-3">Básquetbol</h6>
+                                <ul class="list-unstyled mb-4 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-secondary text-decoration-none small">NBA</a></li>
+                                </ul>
+                                <h6 class="text-white fw-bold mb-0">UFC</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-white fw-bold mb-3">Béisbol</h6>
+                                <ul class="list-unstyled mb-4 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-secondary text-decoration-none small">Calendario / Posiciones</a></li>
+                                </ul>
+                                <h6 class="text-white fw-bold mb-0">Juegos Olímpicos</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-white fw-bold mb-3">Tenis</h6>
+                                <ul class="list-unstyled mb-4 d-flex flex-column gap-2">
+                                    <li><a href="#" class="text-secondary text-decoration-none small">Abierto Mexicano</a></li>
+                                </ul>
+                                <h6 class="text-white fw-bold mb-0">Juegos Centroamericanos</h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h6 class="text-white fw-bold mb-3">Lucha Libre</h6>
+                                <ul class="list-unstyled mb-4 d-flex flex-column gap-2">
+                                    <li><span class="small d-inline-block" style="height: 20px;"></span></li>
+                                </ul>
+                                <h6 class="text-white fw-bold mb-0">Juegos Panamericanos</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item border-start border-light d-none d-md-block" style="height: 20px; opacity: 0.5;"></li>
+            <li class="nav-item d-flex align-items-center px-2">
+                <a href="#" class="text-white fw-bold text-decoration-none">Actualidad</a>
+                <span class="text-white-50 mx-2">/</span>
+                <a href="#" class="text-white text-decoration-none" style="font-size: 0.95rem;">Últimas noticias</a>
+            </li>
+            <li class="nav-item"><a class="nav-link text-white fw-bold px-2" href="#">Más +</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="bg-light border-bottom py-2">
+    <div class="container-fluid d-flex justify-content-center align-items-center gap-3 overflow-x-auto no-scrollbar">
+        <a href="#"><img src="1292.png" alt="América" width="22" height="22" class="rounded-circle"></a>
+        <a href="#"><img src="1284.png" alt="Atlas" width="22" height="22"></a>
+        <a href="#"><img src="1283.png" alt="Chivas" width="22" height="22"></a>
+        <a href="#"><img src="853.png" alt="Cruz Azul" width="22" height="22"></a>
+        <a href="#"><img src="1294.png" alt="Tigres" width="22" height="22"></a>
+        <a href="#"><img src="1297.png" alt="Pumas" width="22" height="22"></a>
+        <a href="#"><img src="1291.png" alt="Toluca" width="22" height="22"></a>
+    </div>
+</div>
 
         <div class="container my-3">
     <div class="bg-white border rounded shadow-sm overflow-hidden mx-auto" style="max-width: 980px;">
