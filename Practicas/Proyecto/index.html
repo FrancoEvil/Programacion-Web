@@ -263,6 +263,68 @@
             font-size: 19px;
         }
     }
+.mtv-marca-svg {
+    height: 24px;
+    width: auto;
+    display: block;
+}
+
+.marca-tv-logo .mtv-tv {
+    background-color: #4169e1;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-left: 6px;
+    font-family: 'Inter', Arial, sans-serif;
+    letter-spacing: -0.3px;
+}
+
+.video-card {
+    width: 220px;
+}
+
+.video-thumb {
+    height: 140px;
+    background-color: #eee;
+}
+
+.video-thumb .play-icon i {
+    font-size: 2.2rem;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(0,0,0,.5);
+}
+
+.btn-scroll-prev-tv,
+.btn-scroll-next-tv {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.btn-scroll-prev-tv { left: -10px; }
+.btn-scroll-next-tv { right: -10px; }
+
+.tv-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+}
+.tv-dot.active {
+    background-color: #0d6efd;
+}
 </style>
 
 <body>
@@ -1628,6 +1690,87 @@
 
                 </div>
 
+                <!--AÑADIDO NOTICIAS, NO MODIFICAR-->
+                
+        <div class="container my-4" style="max-width: 980px;">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-8">
+                    <a href="#" class="text-decoration-none text-dark d-block">
+                        <div class="mb-2 position-relative overflow-hidden rounded-1">
+
+                            <img src="src/OIP.webp" class="img-fluid w-100" alt="Selección Nacional"
+                                style="object-fit: cover; max-height: 420px;">
+                        </div>
+                        <div class="text-danger fw-bold text-uppercase mb-1 mt-2"
+                            style="font-size: 0.75rem; letter-spacing: 0.5px;">
+                            Selección Nacional
+                        </div>
+                        <h2 class="fw-bolder mb-2 lh-1" style="font-size: 2.2rem; letter-spacing: -0.5px;">
+                            Estados Unidos le da lección al Tri de Rafa Márquez
+                        </h2>
+                        <div class="text-uppercase fw-bold d-flex align-items-center gap-1"
+                            style="font-size: 0.65rem; color: #555;">
+                            Ángel Huguez <i class="bi bi-chat-square-text text-primary ms-1"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 d-flex flex-column gap-3">
+                    <a href="#"
+                        class="text-decoration-none text-dark d-flex gap-3 pb-3 border-bottom border-light-subtle">
+                        <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                            <div class="text-danger fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">F1</div>
+                            <h6 class="fw-bold mb-2 lh-sm" style="font-size: 0.95rem;">
+                                Checo Pérez sobre Bottas: La única apuesta de Cadillac con Ferrari
+                            </h6>
+                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto"
+                                style="font-size: 0.6rem; color: #555;">
+                                Israel N. Zúñiga <i class="bi bi-chat-square-text text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 rounded-1 overflow-hidden" style="width: 120px; height: 85px;">
+                            <img src="src/th.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Checo Perez">
+                        </div>
+                    </a>
+
+                    <a href="#"
+                        class="text-decoration-none text-dark d-flex gap-3 pb-3 border-bottom border-light-subtle">
+                        <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                            <div class="text-danger fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Liga MX
+                            </div>
+                            <h6 class="fw-bold mb-2 lh-sm" style="font-size: 0.95rem;">
+                                ¡Escándalo! Un jugador denuncia amenazas de la FMF y la Liga MX en el Senado
+                            </h6>
+                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto"
+                                style="font-size: 0.6rem; color: #555;">
+                                Fabián Torres <i class="bi bi-chat-square-text text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 rounded-1 overflow-hidden" style="width: 120px; height: 85px;">
+                            <img src="src/fmf.png" class="w-100 h-100" style="object-fit: cover;" alt="Senado">
+                        </div>
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-dark d-flex gap-3 pb-3">
+                        <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                            <div class="text-danger fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Liga MX
+                            </div>
+                            <h6 class="fw-bold mb-2 lh-sm" style="font-size: 0.95rem;">
+                                El América más 'débil' quiere sacar a Almada de la crisis
+                            </h6>
+                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto"
+                                style="font-size: 0.6rem; color: #555;">
+                                Ángel Huguez <i class="bi bi-chat-square-text text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 rounded-1 overflow-hidden" style="width: 120px; height: 85px;">
+                            <img src="src/america.png" class="w-100 h-100" style="object-fit: cover;" alt="America">
+                        </div>
+                    </a>
+
+                </div>
+
                 <section class="noticia-principal">
 
                     <img src="src/image3.png" class="imagen-principal" alt="Locura con los campeones del mundo">
@@ -1754,6 +1897,141 @@
 
                     </div>
                 </div>
+<div class="container my-4" style="max-width: 980px;">
+
+    <div class="d-flex justify-content-between align-items-center mb-2">
+<a href="#" class="marca-tv-logo text-decoration-none d-flex align-items-center">
+    <svg class="mtv-marca-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173 50" fill="#cc0000" role="img" aria-label="MARCA">
+        <path
+            d="M27.9 1.4h15v10.3h-2.6v26.6h2.6v10.4h-16V38.3h2.5V21.7L22 42l-7.3-20.3v16.6h2.6v10.4H1.1V38.3h2.6V11.7H1V1.4h15.6l5.6 16" />
+        <path
+            d="M75.1 38.3l-5.9-37H52.3l-5.9 37h-1.9v10.3h14.7V38.3h-1.9l.1-3.9h6.8v3.9h-2v10.3H77V38.3h-1.9zM58.4 28.2l2.3-14.6 2.4 14.6h-4.7z" />
+        <path
+            d="M107.7 38.3v-9.2l-4-4 4-4V6.4l-4.9-5H78.7v10.2h2.5v26.6h-2.5v10.4h16V38.3h-1.8v-8.5h3.4v18.9h14.1V38.3h-2.7zM96.2 22.4h-3.5V11.6h3.5v10.8z" />
+        <path
+            d="M132.9 1.4l5 5V21h-11.5v-9.2l-3.4-.1v26.6h3.4v-9.2h11.5v14.5l-5 5.1h-16.3l-4.8-5.1V6.4l4.8-5" />
+        <path
+            d="M170.1 38.3l-5.9-37h-16.8l-5.9 37h-1.8v10.3h14.6V38.3h-1.9l.1-3.9h6.8v3.9h-1.9v10.3H172V38.3h-1.9zm-16.7-10.1l2.3-14.6 2.4 14.6h-4.7z" />
+    </svg>
+    <span class="mtv-tv">TV</span>
+</a>
+        <a href="#" class="btn btn-primary btn-sm rounded-pill px-3 fw-semibold">
+            Ir a Marca TV <i class="bi bi-chevron-right"></i>
+        </a>
+    </div>
+    <hr class="mt-1 mb-3">
+
+    <div class="position-relative">
+        <div id="marcaTvScroll" class="d-flex gap-3 overflow-x-auto pb-2 no-scrollbar">
+
+            <div class="video-card flex-shrink-0">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="video-thumb position-relative rounded-2 overflow-hidden">
+                        <img src="src/video1.jpg" alt="Selección Mexicana" class="w-100 h-100"
+                            style="object-fit: cover;" onerror="this.src='https://placehold.co/220x140?text=Video'">
+                        <div class="play-icon position-absolute top-50 start-50 translate-middle">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="text-danger fw-bold text-uppercase mt-2" style="font-size: 0.7rem;">Selección Nacional de México</div>
+                    <h6 class="fw-bold lh-sm" style="font-size: 0.85rem;">Selección Mexicana está de regreso ahora bajo el mando de Rafa Márquez</h6>
+                    <div class="d-flex justify-content-between text-muted" style="font-size: 0.7rem;">
+                        <span>Hace 21 horas</span>
+                        <span><i class="bi bi-clock"></i> 0:41 min.</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="video-card flex-shrink-0">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="video-thumb position-relative rounded-2 overflow-hidden">
+                        <img src="src/video2.jpg" alt="Paola Rojas" class="w-100 h-100"
+                            style="object-fit: cover;" onerror="this.src='https://placehold.co/220x140?text=Video'">
+                        <div class="play-icon position-absolute top-50 start-50 translate-middle">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="text-danger fw-bold text-uppercase mt-2" style="font-size: 0.7rem;">Celebrities</div>
+                    <h6 class="fw-bold lh-sm" style="font-size: 0.85rem;">Paola Rojas le responde a Aleks Syntek tras burlarse de Zague: "Conmigo no te metas"</h6>
+                    <div class="d-flex justify-content-between text-muted" style="font-size: 0.7rem;">
+                        <span>Hace 1 día</span>
+                        <span><i class="bi bi-clock"></i> 0:39 min.</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="video-card flex-shrink-0">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="video-thumb position-relative rounded-2 overflow-hidden">
+                        <img src="src/video3.jpg" alt="Mikel Arriola" class="w-100 h-100"
+                            style="object-fit: cover;" onerror="this.src='https://placehold.co/220x140?text=Video'">
+                        <div class="play-icon position-absolute top-50 start-50 translate-middle">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="text-danger fw-bold text-uppercase mt-2" style="font-size: 0.7rem;">Liga MX</div>
+                    <h6 class="fw-bold lh-sm" style="font-size: 0.85rem;">Mikel Arriola y Francisco Iturbide sin asistencia; ascenso y descenso en Liga MX se debate</h6>
+                    <div class="d-flex justify-content-between text-muted" style="font-size: 0.7rem;">
+                        <span>Hace 23 horas</span>
+                        <span><i class="bi bi-clock"></i> 0:48 min.</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="video-card flex-shrink-0">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="video-thumb position-relative rounded-2 overflow-hidden">
+                        <img src="src/video4.jpg" alt="Tigres" class="w-100 h-100"
+                            style="object-fit: cover;" onerror="this.src='https://placehold.co/220x140?text=Video'">
+                        <div class="play-icon position-absolute top-50 start-50 translate-middle">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="text-danger fw-bold text-uppercase mt-2" style="font-size: 0.7rem;">Liga MX</div>
+                    <h6 class="fw-bold lh-sm" style="font-size: 0.85rem;">Tigres pierde contra Juárez y Alan Franco se va de antro</h6>
+                    <div class="d-flex justify-content-between text-muted" style="font-size: 0.7rem;">
+                        <span>Hace 1 día</span>
+                        <span><i class="bi bi-clock"></i> 0:42 min.</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="video-card flex-shrink-0">
+                <a href="#" class="text-decoration-none text-dark">
+                    <div class="video-thumb position-relative rounded-2 overflow-hidden">
+                        <img src="src/video5.jpg" alt="Huracán Polo" class="w-100 h-100"
+                            style="object-fit: cover;" onerror="this.src='https://placehold.co/220x140?text=Video'">
+                        <div class="play-icon position-absolute top-50 start-50 translate-middle">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                    </div>
+                    <div class="text-danger fw-bold text-uppercase mt-2" style="font-size: 0.7rem;">Sucesos</div>
+                    <h6 class="fw-bold lh-sm" style="font-size: 0.85rem;">Huracán Polo: activan alerta para suspensión de clases</h6>
+                    <div class="d-flex justify-content-between text-muted" style="font-size: 0.7rem;">
+                        <span>Hace 19 horas</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <button class="btn-scroll-prev-tv" type="button" id="btnTvPrev">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="btn-scroll-next-tv" type="button" id="btnTvNext">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-center gap-1 mt-3">
+        <span class="tv-dot active"></span>
+        <span class="tv-dot"></span>
+        <span class="tv-dot"></span>
+        <span class="tv-dot"></span>
+    </div>
+
+</div>
+
     </main>
     <footer>
         <div class="footer bg-dark text-white py-3">
@@ -1889,6 +2167,17 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const tvScroll = document.getElementById('marcaTvScroll');
+            const btnTvNext = document.getElementById('btnTvNext');
+            const btnTvPrev = document.getElementById('btnTvPrev');
+
+            btnTvNext?.addEventListener('click', () => {
+                tvScroll.scrollBy({ left: 240, behavior: 'smooth' });
+            });
+
+            btnTvPrev?.addEventListener('click', () => {
+                tvScroll.scrollBy({ left: -240, behavior: 'smooth' });
+            });
             const scrollContainer = document.getElementById('partidosScroll');
             const btnNext = document.querySelector('.btn-scroll-next');
             const btnPrev = document.querySelector('.btn-scroll-prev');
@@ -1942,9 +2231,9 @@
         window.addEventListener('scroll', toggleCompactNav, { passive: true });
         toggleCompactNav();
     </script>
-    <!-- Bootstrap 5 JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
+
     <script src="js/nav.js"></script>
 </body>
 
