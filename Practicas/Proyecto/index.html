@@ -100,23 +100,7 @@
     .no-scrollbar::-webkit-scrollbar {
         display: none;
     }
-    .compact-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1050;
-        background-color: #fff;
-        height: 52px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        transform: translateY(-100%);
-        transition: transform 0.25s ease-in-out;
-    }
- 
-    .compact-nav.is-visible {
-        transform: translateY(0);
-    }
- 
+
     .compact-logo {
         background-color: #cc0000;
         color: #fff;
@@ -130,7 +114,7 @@
         border-radius: 4px;
         flex-shrink: 0;
     }
- 
+
     .compact-title {
         color: #1a1a1a;
         font-weight: 700;
@@ -138,147 +122,147 @@
     }
 
     .contenedor-noticias {
-            max-width: 720px;
-            margin: 27px 0 40px 55px;
+        max-width: 720px;
+        margin: 27px 0 40px 55px;
+    }
+
+    /* Noticia principal */
+    .noticia-principal {
+        display: flex;
+        gap: 16px;
+        padding-bottom: 16px;
+        border-bottom: 3px solid #dee2e6;
+        margin-bottom: 16px;
+    }
+
+    .imagen-principal {
+        width: 48%;
+        height: 182px;
+        object-fit: cover;
+    }
+
+    .texto-principal {
+        flex: 1;
+    }
+
+    /* Etiquetas */
+    .categoria {
+        color: #d71920;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+    }
+
+    /* Títulos */
+    .titulo-principal {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.05;
+        margin-bottom: 10px;
+    }
+
+    .titulo-noticia {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.08;
+        margin-bottom: 10px;
+    }
+
+    .titulo-noticia a,
+    .titulo-principal a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+
+
+
+    .informacion {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+
+
+    .noticia-grande {
+        background-color: #f3f6f9;
+        height: 100%;
+    }
+
+    .imagen-grande {
+        width: 100%;
+        height: 159px;
+        object-fit: cover;
+    }
+
+    .contenido-grande {
+        padding: 10px 12px 15px;
+    }
+
+    .noticia-horizontal {
+        display: flex;
+        gap: 12px;
+        background-color: #f3f6f9;
+        padding: 12px;
+        min-height: 118px;
+        margin-bottom: 16px;
+    }
+
+    .texto-horizontal {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .imagen-horizontal {
+        width: 120px;
+        height: 82px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .noticia-horizontal .titulo-noticia {
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+
+    @media (max-width: 767px) {
+        .contenedor-noticias {
+            margin: 15px auto;
+            padding: 0 12px;
         }
 
-        /* Noticia principal */
         .noticia-principal {
-            display: flex;
-            gap: 16px;
-            padding-bottom: 16px;
-            border-bottom: 3px solid #dee2e6;
-            margin-bottom: 16px;
+            flex-direction: column;
         }
 
         .imagen-principal {
-            width: 48%;
-            height: 182px;
-            object-fit: cover;
+            width: 100%;
+            height: 220px;
         }
 
-        .texto-principal {
-            flex: 1;
-        }
-
-        /* Etiquetas */
-        .categoria {
-            color: #d71920;
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        /* Títulos */
         .titulo-principal {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1.05;
-            margin-bottom: 10px;
+            font-size: 28px;
         }
 
         .titulo-noticia {
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 1.08;
-            margin-bottom: 10px;
-        }
-
-        .titulo-noticia a,
-        .titulo-principal a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-
-
-
-        .informacion {
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-
-
-        .noticia-grande {
-            background-color: #f3f6f9;
-            height: 100%;
-        }
-
-        .imagen-grande {
-            width: 100%;
-            height: 159px;
-            object-fit: cover;
-        }
-
-        .contenido-grande {
-            padding: 10px 12px 15px;
+            font-size: 22px;
         }
 
         .noticia-horizontal {
-            display: flex;
-            gap: 12px;
-            background-color: #f3f6f9;
-            padding: 12px;
-            min-height: 118px;
-            margin-bottom: 16px;
-        }
-
-        .texto-horizontal {
-            flex: 1;
-            min-width: 0;
+            gap: 10px;
         }
 
         .imagen-horizontal {
-            width: 120px;
-            height: 82px;
-            object-fit: cover;
-            flex-shrink: 0;
+            width: 105px;
+            height: 80px;
         }
 
         .noticia-horizontal .titulo-noticia {
-            font-size: 21px;
-            margin-bottom: 8px;
+            font-size: 19px;
         }
-
-        @media (max-width: 767px) {
-            .contenedor-noticias {
-                margin: 15px auto;
-                padding: 0 12px;
-            }
-
-            .noticia-principal {
-                flex-direction: column;
-            }
-
-            .imagen-principal {
-                width: 100%;
-                height: 220px;
-            }
-
-            .titulo-principal {
-                font-size: 28px;
-            }
-
-            .titulo-noticia {
-                font-size: 22px;
-            }
-
-            .noticia-horizontal {
-                gap: 10px;
-            }
-
-            .imagen-horizontal {
-                width: 105px;
-                height: 80px;
-            }
-
-            .noticia-horizontal .titulo-noticia {
-                font-size: 19px;
-            }
-        }
+    }
 </style>
 
 <body>
@@ -1565,35 +1549,40 @@
 
         <div class="container my-4" style="max-width: 980px;">
             <div class="row g-4">
-                
+
                 <div class="col-12 col-md-8">
                     <a href="#" class="text-decoration-none text-dark d-block">
                         <div class="mb-2 position-relative overflow-hidden rounded-1">
 
-                            <img src="src/OIP.webp" class="img-fluid w-100" alt="Selección Nacional" style="object-fit: cover; max-height: 420px;">
+                            <img src="src/OIP.webp" class="img-fluid w-100" alt="Selección Nacional"
+                                style="object-fit: cover; max-height: 420px;">
                         </div>
-                        <div class="text-danger fw-bold text-uppercase mb-1 mt-2" style="font-size: 0.75rem; letter-spacing: 0.5px;">
+                        <div class="text-danger fw-bold text-uppercase mb-1 mt-2"
+                            style="font-size: 0.75rem; letter-spacing: 0.5px;">
                             Selección Nacional
                         </div>
                         <h2 class="fw-bolder mb-2 lh-1" style="font-size: 2.2rem; letter-spacing: -0.5px;">
                             Estados Unidos le da lección al Tri de Rafa Márquez
                         </h2>
-                        <div class="text-uppercase fw-bold d-flex align-items-center gap-1" style="font-size: 0.65rem; color: #555;">
+                        <div class="text-uppercase fw-bold d-flex align-items-center gap-1"
+                            style="font-size: 0.65rem; color: #555;">
                             Ángel Huguez <i class="bi bi-chat-square-text text-primary ms-1"></i>
                         </div>
                     </a>
                 </div>
 
                 <div class="col-12 col-md-4 d-flex flex-column gap-3">
-                    
 
-                    <a href="#" class="text-decoration-none text-dark d-flex gap-3 pb-3 border-bottom border-light-subtle">
+
+                    <a href="#"
+                        class="text-decoration-none text-dark d-flex gap-3 pb-3 border-bottom border-light-subtle">
                         <div class="flex-grow-1 d-flex flex-column justify-content-center">
                             <div class="text-danger fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">F1</div>
                             <h6 class="fw-bold mb-2 lh-sm" style="font-size: 0.95rem;">
                                 Checo Pérez sobre Bottas: La única apuesta de Cadillac con Ferrari
                             </h6>
-                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto" style="font-size: 0.6rem; color: #555;">
+                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto"
+                                style="font-size: 0.6rem; color: #555;">
                                 Israel N. Zúñiga <i class="bi bi-chat-square-text text-primary"></i>
                             </div>
                         </div>
@@ -1602,13 +1591,16 @@
                         </div>
                     </a>
 
-                    <a href="#" class="text-decoration-none text-dark d-flex gap-3 pb-3 border-bottom border-light-subtle">
+                    <a href="#"
+                        class="text-decoration-none text-dark d-flex gap-3 pb-3 border-bottom border-light-subtle">
                         <div class="flex-grow-1 d-flex flex-column justify-content-center">
-                            <div class="text-danger fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Liga MX</div>
+                            <div class="text-danger fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Liga MX
+                            </div>
                             <h6 class="fw-bold mb-2 lh-sm" style="font-size: 0.95rem;">
                                 ¡Escándalo! Un jugador denuncia amenazas de la FMF y la Liga MX en el Senado
                             </h6>
-                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto" style="font-size: 0.6rem; color: #555;">
+                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto"
+                                style="font-size: 0.6rem; color: #555;">
                                 Fabián Torres <i class="bi bi-chat-square-text text-primary"></i>
                             </div>
                         </div>
@@ -1619,11 +1611,13 @@
 
                     <a href="#" class="text-decoration-none text-dark d-flex gap-3 pb-3">
                         <div class="flex-grow-1 d-flex flex-column justify-content-center">
-                            <div class="text-danger fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Liga MX</div>
+                            <div class="text-danger fw-bold text-uppercase mb-1" style="font-size: 0.65rem;">Liga MX
+                            </div>
                             <h6 class="fw-bold mb-2 lh-sm" style="font-size: 0.95rem;">
                                 El América más 'débil' quiere sacar a Almada de la crisis
                             </h6>
-                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto" style="font-size: 0.6rem; color: #555;">
+                            <div class="text-uppercase fw-bold d-flex align-items-center gap-1 mt-auto"
+                                style="font-size: 0.6rem; color: #555;">
                                 Ángel Huguez <i class="bi bi-chat-square-text text-primary"></i>
                             </div>
                         </div>
@@ -1636,140 +1630,130 @@
 
                 <section class="noticia-principal">
 
-        <img src="src/image3.png"
-             class="imagen-principal"
-             alt="Locura con los campeones del mundo">
+                    <img src="src/image3.png" class="imagen-principal" alt="Locura con los campeones del mundo">
 
-        <div class="texto-principal">
+                    <div class="texto-principal">
 
-            <div class="categoria">Selección</div>
+                        <div class="categoria">Selección</div>
 
-            <h1 class="titulo-principal">
-                <a href="#">
-                    Locura con los campeones del mundo
-                </a>
-            </h1>
+                        <h1 class="titulo-principal">
+                            <a href="#">
+                                Locura con los campeones del mundo
+                            </a>
+                        </h1>
 
-            <div class="informacion">
-                Miguel Ángel Lara <i class="bi bi-chat-square-text text-primary"></i>
-            </div>
+                        <div class="informacion">
+                            Miguel Ángel Lara <i class="bi bi-chat-square-text text-primary"></i>
+                        </div>
 
-        </div>
-    </section>
+                    </div>
+                </section>
 
 
-    <!-- NOTICIAS INFERIORES -->
-    <div class="row g-3">
+                <!-- NOTICIAS INFERIORES -->
+                <div class="row g-3">
 
-        <!-- NOTICIA GRANDE IZQUIERDA -->
-        <div class="col-md-4">
+                    <!-- NOTICIA GRANDE IZQUIERDA -->
+                    <div class="col-md-4">
 
-            <article class="noticia-grande">
+                        <article class="noticia-grande">
 
-                <img src="src/image2.png"
-                     class="imagen-grande"
-                     alt="Juanma Castaño">
+                            <img src="src/image2.png" class="imagen-grande" alt="Juanma Castaño">
 
-                <div class="contenido-grande">
+                            <div class="contenido-grande">
 
-                    <div class="categoria">Real Madrid</div>
+                                <div class="categoria">Real Madrid</div>
 
-                    <h2 class="titulo-noticia">
-                        <a href="#">
-                            Juanma Castaño pide perdón pero se reafirma en su mensaje contra Real Madrid TV
-                        </a>
-                    </h2>
+                                <h2 class="titulo-noticia">
+                                    <a href="#">
+                                        Juanma Castaño pide perdón pero se reafirma en su mensaje contra Real Madrid TV
+                                    </a>
+                                </h2>
 
-                    <div class="informacion">
-                        Jaime Rincón <i class="bi bi-chat-square-text text-primary"></i>
+                                <div class="informacion">
+                                    Jaime Rincón <i class="bi bi-chat-square-text text-primary"></i>
+                                </div>
+
+                            </div>
+                        </article>
+
                     </div>
 
-                </div>
-            </article>
 
-        </div>
+                    <!-- COLUMNA DERECHA -->
+                    <div class="col-md-8">
+
+                        <!-- NOTICIA 1 -->
+                        <article class="noticia-horizontal">
+
+                            <div class="texto-horizontal">
+
+                                <div class="categoria">LaLiga EA Sports</div>
+
+                                <h2 class="titulo-noticia">
+                                    <a href="#">
+                                        El CTA señala a Ortiz Arias y a Trujillo Suárez
+                                    </a>
+                                </h2>
+
+                                <div class="informacion">
+                                    Rubén Jiménez <i class="bi bi-chat-square-text text-primary"></i>
+                                </div>
+
+                            </div>
+
+                            <img src="src/image4.png" class="imagen-horizontal" alt="Árbitro de fútbol">
+
+                        </article>
 
 
-        <!-- COLUMNA DERECHA -->
-        <div class="col-md-8">
+                        <!-- NOTICIA 2 -->
+                        <article class="noticia-horizontal">
 
-            <!-- NOTICIA 1 -->
-            <article class="noticia-horizontal">
+                            <div class="texto-horizontal">
 
-                <div class="texto-horizontal">
+                                <div class="categoria">Prensa</div>
 
-                    <div class="categoria">LaLiga EA Sports</div>
+                                <h2 class="titulo-noticia">
+                                    <a href="#">
+                                        Más leña al fuego... también desde la prensa catalana con Rodri
+                                    </a>
 
-                    <h2 class="titulo-noticia">
-                        <a href="#">
-                            El CTA señala a Ortiz Arias y a Trujillo Suárez
-                        </a>
-                    </h2>
+                                </h2>
 
-                    <div class="informacion">
-                        Rubén Jiménez <i class="bi bi-chat-square-text text-primary"></i>
+                            </div>
+
+
+                            <img src="src/image.png" class="imagen-horizontal" alt="Noticias de prensa deportiva">
+
+                        </article>
+
+
+                        <!-- NOTICIA 3 -->
+                        <article class="noticia-horizontal">
+
+                            <div class="texto-horizontal">
+
+                                <div class="categoria">Fútbol</div>
+
+                                <h2 class="titulo-noticia">
+                                    <a href="#">
+                                        El último testigo del juicio no descarta que Maradona muriera por covid
+                                    </a>
+                                </h2>
+
+                                <div class="informacion">
+                                    <i class="bi bi-chat-square-text text-primary"></i>
+                                </div>
+
+                            </div>
+
+                            <img src="src/image1.png" class="imagen-horizontal" alt="Noticia sobre Maradona">
+
+                        </article>
+
                     </div>
-
                 </div>
-
-                <img src="src/image4.png"
-                     class="imagen-horizontal"
-                     alt="Árbitro de fútbol">
-
-            </article>
-
-
-            <!-- NOTICIA 2 -->
-            <article class="noticia-horizontal">
-
-                <div class="texto-horizontal">
-
-                    <div class="categoria">Prensa</div>
-
-                    <h2 class="titulo-noticia">
-                        <a href="#">
-                            Más leña al fuego... también desde la prensa catalana con Rodri
-                        </a>
-                        
-                    </h2>
-
-                </div>
-                
-
-                <img src="src/image.png"
-                     class="imagen-horizontal"
-                     alt="Noticias de prensa deportiva">
-
-            </article>
-
-
-            <!-- NOTICIA 3 -->
-            <article class="noticia-horizontal">
-
-                <div class="texto-horizontal">
-
-                    <div class="categoria">Fútbol</div>
-
-                    <h2 class="titulo-noticia">
-                        <a href="#">
-                            El último testigo del juicio no descarta que Maradona muriera por covid
-                        </a>
-                    </h2>
-
-                    <div class="informacion">
-                        <i class="bi bi-chat-square-text text-primary"></i>
-                    </div>
-
-                </div>
-
-                <img src="src/image1.png"
-                     class="imagen-horizontal"
-                     alt="Noticia sobre Maradona">
-
-            </article>
-
-            </div>
-        </div>
     </main>
     <footer>
         <div class="footer bg-dark text-white py-3">
@@ -1943,20 +1927,20 @@
                 scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
             });
         });
-            const compactNav = document.getElementById('compactNav');
-            const SHOW_THRESHOLD = 250; // px de scroll antes de que aparezca
- 
-            function toggleCompactNav() {
-                if (!compactNav) return;
-                if (window.scrollY > SHOW_THRESHOLD) {
-                    compactNav.classList.add('is-visible');
-                } else {
-                    compactNav.classList.remove('is-visible');
-                }
+        const compactNav = document.getElementById('compactNav');
+        const SHOW_THRESHOLD = 250; // px de scroll antes de que aparezca
+
+        function toggleCompactNav() {
+            if (!compactNav) return;
+            if (window.scrollY > SHOW_THRESHOLD) {
+                compactNav.classList.add('is-visible');
+            } else {
+                compactNav.classList.remove('is-visible');
             }
- 
-            window.addEventListener('scroll', toggleCompactNav, { passive: true });
-            toggleCompactNav();
+        }
+
+        window.addEventListener('scroll', toggleCompactNav, { passive: true });
+        toggleCompactNav();
     </script>
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
